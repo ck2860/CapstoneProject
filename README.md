@@ -27,7 +27,7 @@ Once you get your Jupyter Notebook installed in your operating system, you can l
 $ jupyter notebook
 ```
 
-![Jupyter Notebook Dashboard](https://github.com/ck2860/CodeSubmissionS2/blob/master/screenshot/jupyternotebook.png?raw=true)
+![Jupyter Notebook Dashboard](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/screenshot/jupyternotebook.png?raw=true)
 
 It will take you to the Notebook Dashboard. To create a notebook (the notebook is where you run code), you can click the "New" drop-down button on top-right then select "Python 3". Finally, you are in your first notebook then may run code. 
 
@@ -63,7 +63,7 @@ data
 ```
 Your output data should look like this: 
 
-![Data Array](https://github.com/ck2860/CodeSubmissionS2/blob/master/screenshot/meansData.png?raw=true)
+![Data Array](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/screenshot/meansData.png?raw=true)
 
 Now, you can compile exploreFirst, epsilonDecreasing, and eGreedy strategies in the repo. Additionally, there are three different learning rates (0.001, 0.005, and 0.005) that you could test and compare the results. Because of the reinforcement learning and strategies, the evaluation results may be different. 
 
