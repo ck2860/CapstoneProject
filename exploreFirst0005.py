@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 import tensorflow as tf
 import numpy as np
-## Documentation for exploreFirst (LR = 0.005) policy file
+## Documentation TESTING for exploreFirst (LR = 0.005) policy file
 
-## Documentation for the Contextual Bandit class
+## Documentation TESTING for the Contextual Bandit class
 # this class would start with a contextual bandit, get a bandit,  pull an arm functions
 class contextual_bandit():
     ## create a new Contextual Bandit
