@@ -1,4 +1,4 @@
-# Contextual Bandits
+# Contextual Bandits (HII)
 We would solve contextual bandit problems, using a policy-gradient based reinforcement learning. We would evaluate three different greedy strategies: Explore-First, Epsilon-Decreasing, and Epsilon-Greedy. 
 
 The reinforcement learning code is derived from [Md. Rezaul Karim](https://www.oreilly.com/library/view/tensorflow-powerful-predictive/9781789136913/) and [Arthur Juliani](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-1-5-contextual-bandits-bff01d1aad9c). 
