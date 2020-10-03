@@ -94,7 +94,7 @@ d = 1
 f = 1
 e1 = 1
 g = 1
-for a in range(20):
+for a in range(10):
     #Decreasing Epsilon
     tf.reset_default_graph()
     cBandit = contextual_bandit()
@@ -406,7 +406,7 @@ for a in range(20):
 #     test = df2aa.T
 #     test1=df2a
 
-df1aa = pd.DataFrame(df1a['y'].values.reshape(20,20))
+df1aa = pd.DataFrame(df1a['y'].values.reshape(10,20))
 df1Ameans = df1aa.mean(0)
 
 test1=df1a
@@ -417,7 +417,7 @@ test1=df1a
 #     df1bb = pd.DataFrame(df1b['y'].values.reshape(20,20))
 #     df1Bmeans = df1bb.mean(0)
 
-df2aa = pd.DataFrame(df2a['y'].values.reshape(20,20))
+df2aa = pd.DataFrame(df2a['y'].values.reshape(10,20))
 df2Ameans = df2aa.mean(0)
 test2=df2a
 # test2.to_csv(r'C:\Users\Condy\Desktop\test1Egreedy1.csv', index = False, header=True)
@@ -425,29 +425,29 @@ test2=df2a
 #     df2bb = pd.DataFrame(df2b['y'].values.reshape(20,20))
 #     df2Bmeans = df2bb.mean(0)
 
-df3aa = pd.DataFrame(df3a['y'].values.reshape(20,20))
+df3aa = pd.DataFrame(df3a['y'].values.reshape(10,20))
 df3Ameans = df3aa.mean(0)
 test3=df3a
 # test3.to_csv(r'C:\Users\Condy\Desktop\test1plan1.csv', index = False, header=True)
 
 #     df3bb = pd.DataFrame(df3b['y'].values.reshape(20,20))
 #     df3Bmeans = df3bb.mean(0)
-df4aa = pd.DataFrame(df4a['y'].values.reshape(20,20))
+df4aa = pd.DataFrame(df4a['y'].values.reshape(10,20))
 df4Ameans = df4aa.mean(0)
 test4=df4a
 # test4.to_csv(r'C:\Users\Condy\Desktop\test1plan2.csv', index = False, header=True)
 
-df5aa = pd.DataFrame(df5a['y'].values.reshape(20,20))
+df5aa = pd.DataFrame(df5a['y'].values.reshape(10,20))
 df5Ameans = df5aa.mean(0)
 test5=df5a
 # test5.to_csv(r'C:\Users\Condy\Desktop\test1plan3.csv', index = False, header=True)
 
-df6aa = pd.DataFrame(df6a['y'].values.reshape(20,20))
+df6aa = pd.DataFrame(df6a['y'].values.reshape(10,20))
 df6Ameans = df6aa.mean(0)
 test6=df6a
 # test6.to_csv(r'C:\Users\Condy\Desktop\test1plan4.csv', index = False, header=True)
 
-df7aa = pd.DataFrame(df7a['y'].values.reshape(20,20))
+df7aa = pd.DataFrame(df7a['y'].values.reshape(10,20))
 df7Ameans = df7aa.mean(0)
 test7=df7a
 # test7.to_csv(r'C:\Users\Condy\Desktop\test1plan5.csv', index = False, header=True)
@@ -500,4 +500,4 @@ for column in df.drop('x', axis=1):
 plt.suptitle("In comparison of mean rewards", fontsize=13, fontweight=0, color='black', style='italic', y=1.02)
 plt.show()
 print("The Python script is %s" % (sys.argv[0]))
-print("20 trials of greedy-based strategies were performed.")
+print("10 trials of greedy-based strategies were performed.")
