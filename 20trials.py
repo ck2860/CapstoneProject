@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 import numpy as np
 import pandas as pd
-## Documentation TESTING for exploreFirst (LR = 0.005) policy file
 import sys
+## Documentation TESTING for exploreFirst (LR = 0.005) policy file
 ## Documentation TESTING for the Contextual Bandit class
 # this class would start with a contextual bandit, get a bandit,  pull an arm functions
 
@@ -11,7 +11,7 @@ import sys
 myfile1 = 'Ads_Optimisation.csv'
 adsDF= pd.read_csv(myfile1)
 adsDF.head(2)
-
+ 
 meansDF = adsDF.mean()
 newarr = np.array_split(meansDF, 2)
 data = np.array([newarr[0], newarr[1]])
