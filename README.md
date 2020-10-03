@@ -1,3 +1,5 @@
+Main Page {#mainpage}
+=========
 # Contextual Bandits (HII)
 We would solve contextual bandit problems, using a policy-gradient based reinforcement learning. We would evaluate three different greedy strategies: Explore-First, Epsilon-Decreasing, and Epsilon-Greedy. 
 

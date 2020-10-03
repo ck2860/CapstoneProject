@@ -122,6 +122,7 @@ for a in range(1):
             if i % 500 == 0:
                 meanR = np.mean(total_reward,axis=1)
                 df1a = df1a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
+                print("Epsilon-Decreasing mean rewards: " + str(meanR[0]) + " at the episode of "+ str(i))
             e-=0.0001 #in the end it would be highly exploitative
             i+=1
         a1+=1
@@ -160,6 +161,7 @@ for a in range(1):
             if i % 500 == 0:
                 meanR = np.mean(total_reward,axis=1)
                 df2a = df2a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
+                print("Epsilon-Greedy mean rewards: " + str(meanR[0]) + " at the episode of "+ str(i))
             i+=1
         b+=1
         print("Epsilon-Greedy is done!")
@@ -196,6 +198,7 @@ for a in range(1):
             if i % 500 == 0:
                 meanR = np.mean(total_reward,axis=1)
                 df3a = df3a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
+                print("Hybrid#1 mean rewards: " + str(meanR[0]) + " at the episode of "+ str(i))
             e-=0.00008 #in the end it would be highly exploitative (10% explore, 90% exploit)
             i+=1
         c+=1
@@ -238,6 +241,7 @@ for a in range(1):
 
                 meanR = np.mean(total_reward,axis=1)
                 df4a = df4a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
+                print("Hybrid#2 mean rewards: " + str(meanR[0]) + " at the episode of "+ str(i))
             e-=0.00018 #in the end it would be highly exploitative (10% explore, 90% exploit)
             if e < 0.1:
                 e = 0.1
@@ -282,6 +286,7 @@ for a in range(1):
 
                 meanR = np.mean(total_reward,axis=1)
                 df5a = df5a.append({'x': i, 'y': meanR[0],'trial': 'trial'+ str(a+1)}, ignore_index=True)
+                print("Hybrid#3 mean rewards: " + str(meanR[0]) + " at the episode of "+ str(i))
             e-=0.00016 #in the end it would be highly exploitative (10% explore, 90% exploit)
             if e < 0.1:
                 e = 0.1
@@ -323,6 +328,7 @@ for a in range(1):
 
                 meanR = np.mean(total_reward,axis=1)
                 df6a = df6a.append({'x': i, 'y': meanR[0],'trial': 'trial'+ str(a+1)}, ignore_index=True)
+                print("Hybrid#4 mean rewards: " + str(meanR[0]) + " at the episode of "+ str(i))
             e-=0.00036 #in the end it would be highly exploitative (10% explore, 90% exploit)
             if e < 0.1:
                 e = 0.1
@@ -368,6 +374,7 @@ for a in range(1):
 
                 meanR = np.mean(total_reward,axis=1)
                 df7a = df7a.append({'x': i, 'y': meanR[0],'trial': 'trial'+ str(a+1)}, ignore_index=True)
+                print("Hybrid#5 mean rewards: " + str(meanR[0]) + " at the episode of "+ str(i))
             e-=0.00032 #in the end it would be highly exploitative (10% explore, 90% exploit)
             if e < 0.1:
                 e = 0.1
