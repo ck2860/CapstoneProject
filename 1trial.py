@@ -8,8 +8,8 @@ import sys
 ## Documentation TESTING for the Contextual Bandit class
 # this class would start with a contextual bandit, get a bandit,  pull an arm functions
 
-myfile1 = 'Ads_Optimisation.csv'
-adsDF= pd.read_csv(myfile1)
+
+adsDF= pd.read_csv('data/Ads_Optimisation.csv')
 
 meansDF = adsDF.mean()
 newarr = np.array_split(meansDF, 2)
