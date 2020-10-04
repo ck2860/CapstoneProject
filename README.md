@@ -93,7 +93,7 @@ Lastly, you can run a Tukey Plot by:
 python Tukey.py
 ```
 
-Note that if you use a different random seed for 1trial.py, the evaluation results may be different. It is because of reinforcement learning and strategies. 
+>Note that if you use a different random seed for 1trial.py, the evaluation results may be different due to reinforcement learning and strategies. 
 
 
 If you have any questions, please feel free to email me at ck2860@rit.edu. 
