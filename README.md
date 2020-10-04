@@ -1,5 +1,3 @@
-Main Page {#mainpage}
-=========
 # Contextual Bandit Methods
 
 We would solve contextual bandit problems, using a policy-gradient based reinforcement learning. We would evaluate seven different epsilon-based strategies. We have Epsilon-Greedy, Epsilon-Decreasing, and five different combinations of Epsilon-Greedy and Epsilon-Decreasing. We tweaked with the epsilon probability and episodes.  Five combinations were created! 
