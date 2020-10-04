@@ -23,16 +23,16 @@ In the experiment, we have 10,000 episodes and use the learning rate of 0.05. Th
 All of the strategies are in the evaluation code. The reinforcement learning code is derived from [Md. Rezaul Karim](https://www.oreilly.com/library/view/tensorflow-powerful-predictive/9781789136913/) and [Arthur Juliani](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-1-5-contextual-bandits-bff01d1aad9c). 
 
 ## Table of contents
-* [Requirements](#Requirements)
-* [Setup](#Setup)
-* [Instructions](#Instructions)
+* Requirements
+* Setup
+* Instructions
 
 ## Requirements
 You will need to have a couple of Python's libraries/packages: numPy, pandas, Tensorflow, matplotlibpyplot, scipy.stats, and atsmodels.stats.multicomp. Most of the packages are pre-installed in Anaconda.
 
 You will be able to run the programs in Anaconda prompt. 
 
->Note: if you are able to run the programs or have those packages installed in a different software or environment. You can skip the Setup section or  (You could install the packages with Pip.)
+*Note: if you are able to run the programs or have those packages installed in a different software or environment. You can skip the Setup section or  (You could install the packages with Pip.)*
                                             
 ## Setup
 You will be installing [Anaconda](http://anaconda.com/downloads) and required packages for this project. 
@@ -59,11 +59,10 @@ Once you have the files in your system/computer, you should see there are three 
 Both Mean Rewards Result and Tukey datasets are the results from the evaluations with 20 random seeds. The Mean Rewards Result data is used for T-tests and ANOVA. Lastly, the Tukey Data is used for Tukey Test. 
 
 *Please make sure they all are in the same directory so the scripts
-would be able to recognize the data sets from the data folder.*
+would be able to recognize the data sets from the data folder. For this reinforcement learning, the data set can be used in online advertising to determine which is the best ad to show the user. It does not mean they would work with other bandit problems.*
 
->Note: For this reinforcement learning, the data set can be used in online advertising to determine which is the best ad to show the user. It does not mean they would work with other bandit problems. 
 
-You will have five Pythons scripts to run if you like! The figures for evaluations and Tukey should be in pop-up windows. For evaluations, there are three Python program that you can run: [1trial.py](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/1trial.py), [10trials.py](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/10trials.py), and [20trials.py](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/20trials.py). 1trial.py runs one trial of evaluation. 10trials.py runs 10 trials of evaluation. Then 20trials.py 10trials runs 20 trials of evaluation. Last two Python programs: [StatsTests.py](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py) and [Tukey.py](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Tukey.py) are used for statistical analysis. You run T-tests and ANOVA by running StatsTest.py. You also can do a Tukey test by compiling Tukey.py. Please read [documentation](https://ck2860.github.io/MidtermCode-CondyKan/index.html) for more details. 
+You will have five Pythons scripts to run if you like! The figures for evaluations and Tukey should be in pop-up windows. For evaluations, there are three Python program that you can run: [1trial.py](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/1trial.py), [10trials.py](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/10trials.py), and [20trials.py](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/20trials.py). 1trial.py runs one trial of evaluation. 10trials.py runs 10 trials of evaluation. Then 20trials.py runs 20 trials of evaluation. Last two Python programs: [StatsTests.py](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py) and [Tukey.py](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Tukey.py) are used for statistical analysis. You run T-tests and ANOVA by running StatsTest.py. You also can do a Tukey test by compiling Tukey.py. Please read [documentation](https://ck2860.github.io/MidtermCode-CondyKan/index.html) for more details. 
 
 Please open your Anaconda Prompt and go to the directory where you downloaded the project code.
 
@@ -72,7 +71,7 @@ If you want to run one trial of greedy-based strategies of your chosen random se
 ```
 python 1trial.py 5
 ```
->Note that if you use a different random seed for 1trial.py, the evaluation results may be different due to reinforcement learning and strategies. 
+*Note that if you use a different random seed for 1trial.py, the evaluation results may be different due to reinforcement learning and strategies.*
 
 If you want to run 10 trials of greedy-based strategies of your chosen random seed. You should compile it by:
 ```
