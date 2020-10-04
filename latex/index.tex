@@ -20,15 +20,15 @@ In the experiment, we have 10,000 episodes and use the learning rate of 0.\+05. 
 All of the strategies are in the evaluation code. The reinforcement learning code is derived from \href{https://www.oreilly.com/library/view/tensorflow-powerful-predictive/9781789136913/}{\texttt{ Md. Rezaul Karim}} and \href{https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-1-5-contextual-bandits-bff01d1aad9c}{\texttt{ Arthur Juliani}}.\hypertarget{index_autotoc_md1}{}\doxysubsection{Table of contents}\label{index_autotoc_md1}
 
 \begin{DoxyItemize}
-\item \href{\#Requirements}{\texttt{ Requirements}}
-\item \href{\#Setup}{\texttt{ Setup}}
-\item \href{\#Instructions}{\texttt{ Instructions}}
+\item Requirements
+\item Setup
+\item Instructions
 \end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{Requirements}\label{index_autotoc_md2}
 You will need to have a couple of Python\textquotesingle{}s libraries/packages\+: num\+Py, pandas, Tensorflow, matplotlibpyplot, scipy.\+stats, and atsmodels.\+stats.\+multicomp. Most of the packages are pre-\/installed in Anaconda.
 
 You will be able to run the programs in Anaconda prompt.
 
-$>$Note\+: if you are able to run the programs or have those packages installed in a different software or environment. You can skip the Setup section or (You could install the packages with Pip.)\hypertarget{index_autotoc_md3}{}\doxysubsection{Setup}\label{index_autotoc_md3}
+{\itshape Note\+: if you are able to run the programs or have those packages installed in a different software or environment. You can skip the Setup section or (You could install the packages with Pip.)}\hypertarget{index_autotoc_md3}{}\doxysubsection{Setup}\label{index_autotoc_md3}
 You will be installing \href{http://anaconda.com/downloads}{\texttt{ Anaconda}} and required packages for this project. Please download the right version for your system/computer.
 
 Recall that num\+Py, pandas, matplotlibpyplot, and stats packages are already installed in Jupyter notebook, you only need to install Tensor\+Flow. Using the Anaconda Prompt, it can be done by entering\+:
@@ -52,11 +52,9 @@ The Ads Optimisation data set is obtained from \href{https://www.kaggle.com/akra
 
 Both Mean Rewards Result and \mbox{\hyperlink{namespace_tukey}{Tukey}} datasets are the results from the evaluations with 20 random seeds. The Mean Rewards Result data is used for T-\/tests and A\+N\+O\+VA. Lastly, the \mbox{\hyperlink{namespace_tukey}{Tukey}} Data is used for \mbox{\hyperlink{namespace_tukey}{Tukey}} Test.
 
-{\itshape Please make sure they all are in the same directory so the scripts would be able to recognize the data sets from the data folder.}
+{\itshape Please make sure they all are in the same directory so the scripts would be able to recognize the data sets from the data folder. For this reinforcement learning, the data set can be used in online advertising to determine which is the best ad to show the user. It does not mean they would work with other bandit problems.}
 
-$>$Note\+: For this reinforcement learning, the data set can be used in online advertising to determine which is the best ad to show the user. It does not mean they would work with other bandit problems.
-
-You will have five Pythons scripts to run if you like! The figures for evaluations and \mbox{\hyperlink{namespace_tukey}{Tukey}} should be in pop-\/up windows. For evaluations, there are three Python program that you can run\+: \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/1trial.py}{\texttt{ 1trial.\+py}}, \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/10trials.py}{\texttt{ 10trials.\+py}}, and \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/20trials.py}{\texttt{ 20trials.\+py}}. 1trial.\+py runs one trial of evaluation. 10trials.\+py runs 10 trials of evaluation. Then 20trials.\+py 10trials runs 20 trials of evaluation. Last two Python programs\+: \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py}{\texttt{ Stats\+Tests.\+py}} and \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Tukey.py}{\texttt{ Tukey.\+py}} are used for statistical analysis. You run T-\/tests and A\+N\+O\+VA by running Stats\+Test.\+py. You also can do a \mbox{\hyperlink{namespace_tukey}{Tukey}} test by compiling Tukey.\+py. Please read \href{https://ck2860.github.io/MidtermCode-CondyKan/index.html}{\texttt{ documentation}} for more details.
+You will have five Pythons scripts to run if you like! The figures for evaluations and \mbox{\hyperlink{namespace_tukey}{Tukey}} should be in pop-\/up windows. For evaluations, there are three Python program that you can run\+: \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/1trial.py}{\texttt{ 1trial.\+py}}, \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/10trials.py}{\texttt{ 10trials.\+py}}, and \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/20trials.py}{\texttt{ 20trials.\+py}}. 1trial.\+py runs one trial of evaluation. 10trials.\+py runs 10 trials of evaluation. Then 20trials.\+py runs 20 trials of evaluation. Last two Python programs\+: \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py}{\texttt{ Stats\+Tests.\+py}} and \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Tukey.py}{\texttt{ Tukey.\+py}} are used for statistical analysis. You run T-\/tests and A\+N\+O\+VA by running Stats\+Test.\+py. You also can do a \mbox{\hyperlink{namespace_tukey}{Tukey}} test by compiling Tukey.\+py. Please read \href{https://ck2860.github.io/MidtermCode-CondyKan/index.html}{\texttt{ documentation}} for more details.
 
 Please open your Anaconda Prompt and go to the directory where you downloaded the project code.
 
@@ -66,7 +64,7 @@ If you want to run one trial of greedy-\/based strategies of your chosen random 
 \end{DoxyCode}
 
 
-$>$Note that if you use a different random seed for 1trial.\+py, the evaluation results may be different due to reinforcement learning and strategies.
+{\itshape Note that if you use a different random seed for 1trial.\+py, the evaluation results may be different due to reinforcement learning and strategies.}
 
 If you want to run 10 trials of greedy-\/based strategies of your chosen random seed. You should compile it by\+: 
 \begin{DoxyCode}{0}

@@ -80,15 +80,15 @@ Contextual Bandit Methods</h1>
 <h2><a class="anchor" id="autotoc_md1"></a>
 Table of contents</h2>
 <ul>
-<li><a href="#Requirements">Requirements</a></li>
-<li><a href="#Setup">Setup</a></li>
-<li><a href="#Instructions">Instructions</a></li>
+<li>Requirements</li>
+<li>Setup</li>
+<li>Instructions</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Requirements</h2>
 <p>You will need to have a couple of Python's libraries/packages: numPy, pandas, Tensorflow, matplotlibpyplot, scipy.stats, and atsmodels.stats.multicomp. Most of the packages are pre-installed in Anaconda.</p>
 <p>You will be able to run the programs in Anaconda prompt.</p>
-<p>&gt;Note: if you are able to run the programs or have those packages installed in a different software or environment. You can skip the Setup section or (You could install the packages with Pip.)</p>
+<p><em>Note: if you are able to run the programs or have those packages installed in a different software or environment. You can skip the Setup section or (You could install the packages with Pip.)</em></p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Setup</h2>
 <p>You will be installing <a href="http://anaconda.com/downloads">Anaconda</a> and required packages for this project. Please download the right version for your system/computer.</p>
@@ -104,12 +104,11 @@ Instructions</h2>
 <p>Once you have the files in your system/computer, you should see there are three different datasets: <a href="https://github.com/ck2860/CodeSubmissionS2/blob/master/data/Ads_Optimisation.csv">Ads Optimisation</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/MeanRewardsResults.csv">Mean Rewards Results</a>, and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/TukeyData.csv">Tukey Data</a>, which are already provided in the data folder. You will be using them for this code project so make sure they are in the right folder &ndash; data. When you run the python scripts, they should be able to find the datasets in the data folder.</p>
 <p>The Ads Optimisation data set is obtained from <a href="https://www.kaggle.com/akram24/ads-ctr-optimisation">Kaggle</a>. You will be using this for reinforcement learning and evaluations.</p>
 <p>Both Mean Rewards Result and <a class="el" href="namespace_tukey.html">Tukey</a> datasets are the results from the evaluations with 20 random seeds. The Mean Rewards Result data is used for T-tests and ANOVA. Lastly, the <a class="el" href="namespace_tukey.html">Tukey</a> Data is used for <a class="el" href="namespace_tukey.html">Tukey</a> Test.</p>
-<p><em>Please make sure they all are in the same directory so the scripts would be able to recognize the data sets from the data folder.</em></p>
-<p>&gt;Note: For this reinforcement learning, the data set can be used in online advertising to determine which is the best ad to show the user. It does not mean they would work with other bandit problems.</p>
-<p>You will have five Pythons scripts to run if you like! The figures for evaluations and <a class="el" href="namespace_tukey.html">Tukey</a> should be in pop-up windows. For evaluations, there are three Python program that you can run: <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/1trial.py">1trial.py</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/10trials.py">10trials.py</a>, and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/20trials.py">20trials.py</a>. 1trial.py runs one trial of evaluation. 10trials.py runs 10 trials of evaluation. Then 20trials.py 10trials runs 20 trials of evaluation. Last two Python programs: <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py">StatsTests.py</a> and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Tukey.py">Tukey.py</a> are used for statistical analysis. You run T-tests and ANOVA by running StatsTest.py. You also can do a <a class="el" href="namespace_tukey.html">Tukey</a> test by compiling Tukey.py. Please read <a href="https://ck2860.github.io/MidtermCode-CondyKan/index.html">documentation</a> for more details.</p>
+<p><em>Please make sure they all are in the same directory so the scripts would be able to recognize the data sets from the data folder. For this reinforcement learning, the data set can be used in online advertising to determine which is the best ad to show the user. It does not mean they would work with other bandit problems.</em></p>
+<p>You will have five Pythons scripts to run if you like! The figures for evaluations and <a class="el" href="namespace_tukey.html">Tukey</a> should be in pop-up windows. For evaluations, there are three Python program that you can run: <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/1trial.py">1trial.py</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/10trials.py">10trials.py</a>, and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/20trials.py">20trials.py</a>. 1trial.py runs one trial of evaluation. 10trials.py runs 10 trials of evaluation. Then 20trials.py runs 20 trials of evaluation. Last two Python programs: <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py">StatsTests.py</a> and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Tukey.py">Tukey.py</a> are used for statistical analysis. You run T-tests and ANOVA by running StatsTest.py. You also can do a <a class="el" href="namespace_tukey.html">Tukey</a> test by compiling Tukey.py. Please read <a href="https://ck2860.github.io/MidtermCode-CondyKan/index.html">documentation</a> for more details.</p>
 <p>Please open your Anaconda Prompt and go to the directory where you downloaded the project code.</p>
 <p>If you want to run one trial of greedy-based strategies of your chosen random seed. For example, if you want to run it with a random seed of 5. You can compile it by: </p><div class="fragment"><div class="line">python 1trial.py 5</div>
-</div><!-- fragment --><p>&gt;Note that if you use a different random seed for 1trial.py, the evaluation results may be different due to reinforcement learning and strategies.</p>
+</div><!-- fragment --><p><em>Note that if you use a different random seed for 1trial.py, the evaluation results may be different due to reinforcement learning and strategies.</em></p>
 <p>If you want to run 10 trials of greedy-based strategies of your chosen random seed. You should compile it by: </p><div class="fragment"><div class="line">python 10trials.py</div>
 </div><!-- fragment --><p>If you want to run 20 trials of greedy-based strategies of your chosen random seed. Your command line should be: </p><div class="fragment"><div class="line">python 20trials.py</div>
 </div><!-- fragment --><p>For t-tests and ANOVA, you would want to run by:</p>
