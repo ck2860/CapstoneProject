@@ -3,11 +3,10 @@ import tensorflow as tf
 import numpy as np
 import pandas as pd
 import sys
-## Documentation TESTING for exploreFirst (LR = 0.005) policy file
-
-## Documentation TESTING for the Contextual Bandit class
-# this class would start with a contextual bandit, get a bandit,  pull an arm functions
-
+##@package TWENTYtrials
+## Documentation for 20trials.py
+#
+# 20 trials of evaluation were performed with 20 different random seeds.Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluations.
 adsDF= pd.read_csv('data/Ads_Optimisation.csv')
 
 meansDF = adsDF.mean()
@@ -15,9 +14,9 @@ newarr = np.array_split(meansDF, 2)
 data = np.array([newarr[0], newarr[1]])
 data = np.negative([newarr[0], newarr[1]])
 
+## Documentation for the Contextual Bandit class
+# this class initializes with a state, bandits, number of bandits, and number of actions
 class contextual_bandit():
-    ## create a new Contextual Bandit
-    # initialize with a state, bandits, number of bandits, and number of actions
     def __init__(self):
         # create a new Contextual Bandit
         self.state = 0 # The number of current bandit
@@ -86,7 +85,7 @@ f = 1
 e1 = 1
 g = 1
 for a in range(20):
-    #Decreasing Epsilon
+    ## Decreasing Epsilon
     tf.reset_default_graph()
     cBandit = contextual_bandit()
     myAgent = agent(lr=0.005,s_size=cBandit.num_bandits,a_size=cBandit.num_actions)
@@ -126,7 +125,7 @@ for a in range(20):
         a1+=1
         print("Epsilon-Decreasing is done!")
 
-    # Epsilon-Greedy
+    ## Epsilon-Greedy
     tf.reset_default_graph()
     cBandit = contextual_bandit()
     myAgent = agent(lr=0.005,s_size=cBandit.num_bandits,a_size=cBandit.num_actions)
@@ -164,7 +163,7 @@ for a in range(20):
         b+=1
         print("Epsilon-Greedy is done!")
 
-    #Hybrid#1
+    ## Hybrid#1
     tf.reset_default_graph()
     cBandit = contextual_bandit()
     myAgent = agent(lr=0.005,s_size=cBandit.num_bandits,a_size=cBandit.num_actions)
@@ -203,7 +202,7 @@ for a in range(20):
         print("Hybrid#1 is done!")
 
 
-    #Hybrid#2
+    ## Hybrid#2
     tf.reset_default_graph()
     cBandit = contextual_bandit()
     myAgent = agent(lr=0.005,s_size=cBandit.num_bandits,a_size=cBandit.num_actions)
@@ -246,7 +245,7 @@ for a in range(20):
             i+=1
         d+=1
         print("Hybrid#2 is done!")
-    #Hybrid#3
+    ## Hybrid#3
     tf.reset_default_graph()
     cBandit = contextual_bandit()
     myAgent = agent(lr=0.005,s_size=cBandit.num_bandits,a_size=cBandit.num_actions)
@@ -291,7 +290,7 @@ for a in range(20):
             i+=1
         e1+=1
         print("Hybrid#3 is done!")
-    #Hybrid#4
+    ## Hybrid#4
     tf.reset_default_graph()
     cBandit = contextual_bandit()
     myAgent = agent(lr=0.005,s_size=cBandit.num_bandits,a_size=cBandit.num_actions)
@@ -301,7 +300,7 @@ for a in range(20):
     e = 1 #start with highly explorative (90% explore, 10% exploit)
 
     init = tf.global_variables_initializer()
-    # Launch the tensorflow graph
+    ## Launch the tensorflow graph
     with tf.Session() as sess:
         sess.run(init)
         i = 0
@@ -333,7 +332,7 @@ for a in range(20):
             i+=1
         f+=1
         print("Hybrid#4 is done!")
-    #Hybrid#5
+    ## Hybrid#5
     tf.reset_default_graph()
     cBandit = contextual_bandit()
     myAgent = agent(lr=0.005,s_size=cBandit.num_bandits,a_size=cBandit.num_actions)

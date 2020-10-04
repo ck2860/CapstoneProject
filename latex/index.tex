@@ -1,37 +1,37 @@
-\hypertarget{index_autotoc_md0}{}\doxysection{Contextual Bandits (\+H\+I\+I)}\label{index_autotoc_md0}
-We would solve contextual bandit problems, using a policy-\/gradient based reinforcement learning. We would evaluate three different greedy strategies\+: Explore-\/\+First, Epsilon-\/\+Decreasing, and Epsilon-\/\+Greedy.
+\hypertarget{index_autotoc_md0}{}\doxysection{Contextual Bandit Methods}\label{index_autotoc_md0}
+We would solve contextual bandit problems, using a policy-\/gradient based reinforcement learning. We would evaluate seven different epsilon-\/based strategies. We have Epsilon-\/\+Greedy, Epsilon-\/\+Decreasing, and five different combinations of Epsilon-\/\+Greedy and Epsilon-\/\+Decreasing. We tweaked with the epsilon probability and episodes. Five combinations were created!
 
-The reinforcement learning code is derived from \href{https://www.oreilly.com/library/view/tensorflow-powerful-predictive/9781789136913/}{\texttt{ Md. Rezaul Karim}} and \href{https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-1-5-contextual-bandits-bff01d1aad9c}{\texttt{ Arthur Juliani}}.\hypertarget{index_autotoc_md1}{}\doxysubsection{Table of contents}\label{index_autotoc_md1}
+In the experiment, we have 10,000 episodes and use the learning rate of 0.\+05. The epsilon is the probability of exploration.
+
+{\bfseries{Epsilon-\/\+Decreasing\+:}} The experiment starts with pure exploration and epsilon is decreased to 0\% in the end.
+
+{\bfseries{Epsilon-\/\+Greedy\+:}} Epsilon is 10\%. The probability is fixed.
+
+{\bfseries{Hybrid\#1\+:}} Epsilon is decreased from 90\% to 10\% throughout the experiment.
+
+{\bfseries{Hybrid\#2\+:}} Epsilon is decreased from 100\% to 10\% in the first 5,000 episodes and keeps as 10\% for the rest of the experiment.
+
+{\bfseries{Hybrid\#3\+:}} Epsilon is decreased from 90\% to 10\% in the first 5,000 episodes and keeps as 10\% for the rest of the experiment.
+
+{\bfseries{Hybrid\#4\+:}} Epsilon is decreased from 100\% to 10\% in the first 2,500 episodes and keeps as 10\% for the rest of the experiment.
+
+{\bfseries{Hybrid\#5\+:}} Epsilon is decreased from 90\% to 10\% in the first 2,500 episodes and keeps as 10\% for the rest of the experiment.
+
+All of the strategies are in the evaluation code. The reinforcement learning code is derived from \href{https://www.oreilly.com/library/view/tensorflow-powerful-predictive/9781789136913/}{\texttt{ Md. Rezaul Karim}} and \href{https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-1-5-contextual-bandits-bff01d1aad9c}{\texttt{ Arthur Juliani}}.\hypertarget{index_autotoc_md1}{}\doxysubsection{Table of contents}\label{index_autotoc_md1}
 
 \begin{DoxyItemize}
 \item \href{\#Requirements}{\texttt{ Requirements}}
 \item \href{\#Setup}{\texttt{ Setup}}
 \item \href{\#Instructions}{\texttt{ Instructions}}
 \end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{Requirements}\label{index_autotoc_md2}
-This code submission run in the Jupyter Notebook, so you may need to install Jupyter Notebook. Also, the code is in Python so you will need to use few Python\textquotesingle{}s libraries/packages\+: num\+Py, pandas, Tensor\+Flow, and Matplotib.
+You will need to have a couple of Python\textquotesingle{}s libraries/packages\+: num\+Py, pandas, Tensorflow, matplotlibpyplot, scipy.\+stats, and atsmodels.\+stats.\+multicomp. Most of the packages are pre-\/installed in Anaconda.
 
-Note\+: if you are able to run the code in a different software/environment, you can skip the Setup section. You could install num\+Py, pandas, Tensor\+Flow, and Matplotlib with with Pip.\hypertarget{index_autotoc_md3}{}\doxysubsection{Setup}\label{index_autotoc_md3}
-To run this project, install \href{https://jupyter.org/}{\texttt{ Jupyter Notebook}}. If you have Pip installed in your environment, you could run and install it by entering\+:
+You will be able to run the programs in Anaconda prompt.
 
+$>$Note\+: if you are able to run the programs or have those packages installed in a different software or environment. You can skip the Setup section or (You could install the packages with Pip.)\hypertarget{index_autotoc_md3}{}\doxysubsection{Setup}\label{index_autotoc_md3}
+You will be installing \href{http://anaconda.com/downloads}{\texttt{ Anaconda}} and required packages for this project. Please download the right version for your system/computer.
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\$ pip install jupyter}
-\end{DoxyCode}
-
-
-Once you get your Jupyter Notebook installed in your operating system, you can launch it by entering\+:
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\$ jupyter notebook}
-\end{DoxyCode}
-
-
-
-
-It will take you to the Notebook Dashboard. To create a notebook (the notebook is where you run code), you can click the \char`\"{}\+New\char`\"{} drop-\/down button on top-\/right then select \char`\"{}\+Python 3\char`\"{}. Finally, you are in your first notebook then may run code.
-
-num\+Py and Matplotlib are already installed in Jupyter notebook, you only need to install Tensor\+Flow. Using the Anaconda Prompt, it can be done by entering\+:
+Recall that num\+Py, pandas, matplotlibpyplot, and stats packages are already installed in Jupyter notebook, you only need to install Tensor\+Flow. Using the Anaconda Prompt, it can be done by entering\+:
 
 
 \begin{DoxyCode}{0}
@@ -39,40 +39,61 @@ num\+Py and Matplotlib are already installed in Jupyter notebook, you only need 
 \end{DoxyCode}
 
 
-Note\+: It depends on your system. There are other commands that you can run with conda. Please read more about the \href{https://anaconda.org/conda-forge/tensorflow}{\texttt{ Tensorflow Installment}}.\hypertarget{index_autotoc_md4}{}\doxysubsection{Instructions}\label{index_autotoc_md4}
-At first, you will need to download \href{https://github.com/ck2860/CodeSubmissionS2/blob/master/data/Ads_Optimisation.csv}{\texttt{ Ads Optimisation data}}, which is already provided in the data folder. You will import the data set in the Notebook. The data set is obtained from \href{https://www.kaggle.com/akram24/ads-ctr-optimisation}{\texttt{ Kaggle}}. You will use pandas and numpy as well.
+Note\+: It depends on your system. There are other commands that you can run with conda. Please read more about \href{https://anaconda.org/conda-forge/tensorflow}{\texttt{ Tensorflow Installment}}.\hypertarget{index_autotoc_md4}{}\doxysubsection{Instructions}\label{index_autotoc_md4}
+There are two options that you could download the whole code.
+\begin{DoxyEnumerate}
+\item Click \char`\"{}\+Code\char`\"{} green button and \char`\"{}download Z\+I\+P\char`\"{} on the top right hand on the repository page.
+\item Clone a repository by performing git clone.
+\end{DoxyEnumerate}
 
-Note\+: For this reinforcement learning, the data set can be used in online advertising to determine which is the best ad to show the user. It does not mean they would work with other bandit problems.
+Once you have the files in your system/computer, you should see there are three different datasets\+: \href{https://github.com/ck2860/CodeSubmissionS2/blob/master/data/Ads_Optimisation.csv}{\texttt{ Ads Optimisation}}, \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/MeanRewardsResults.csv}{\texttt{ Mean Rewards Results}}, and \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/TukeyData.csv}{\texttt{ Tukey Data}}, which are already provided in the data folder. You will be using them for this code project so make sure they are in the right folder -- data. When you run the python scripts, they should be able to find the datasets in the data folder.
 
+The Ads Optimisation data set is obtained from \href{https://www.kaggle.com/akram24/ads-ctr-optimisation}{\texttt{ Kaggle}}. You will be using this for reinforcement learning and evaluations.
 
+Both Mean Rewards Result and \mbox{\hyperlink{namespace_tukey}{Tukey}} datasets are the results from the evaluations with 20 random seeds. The Mean Rewards Result data is used for T-\/tests and A\+N\+O\+VA. Lastly, the \mbox{\hyperlink{namespace_tukey}{Tukey}} Data is used for \mbox{\hyperlink{namespace_tukey}{Tukey}} Test.
+
+{\itshape Please make sure they all are in the same directory so the scripts would be able to recognize the data sets from the data folder.}
+
+$>$Note\+: For this reinforcement learning, the data set can be used in online advertising to determine which is the best ad to show the user. It does not mean they would work with other bandit problems.
+
+You will have five Pythons scripts to run if you like! The figures for evaluations and \mbox{\hyperlink{namespace_tukey}{Tukey}} should be in pop-\/up windows. For evaluations, there are three Python program that you can run\+: \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/1trial.py}{\texttt{ 1trial.\+py}}, \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/10trials.py}{\texttt{ 10trials.\+py}}, and \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/20trials.py}{\texttt{ 20trials.\+py}}. 1trial.\+py runs one trial of evaluation. 10trials.\+py runs 10 trials of evaluation. Then 20trials.\+py 10trials runs 20 trials of evaluation. Last two Python programs\+: \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py}{\texttt{ Stats\+Tests.\+py}} and \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Tukey.py}{\texttt{ Tukey.\+py}} are used for statistical analysis. You run T-\/tests and A\+N\+O\+VA by running Stats\+Test.\+py. You also can do a \mbox{\hyperlink{namespace_tukey}{Tukey}} test by compiling Tukey.\+py. Please read \href{https://ck2860.github.io/MidtermCode-CondyKan/index.html}{\texttt{ documentation}} for more details.
+
+Please open your Anaconda Prompt and go to the directory where you downloaded the project code.
+
+If you want to run one trial of greedy-\/based strategies of your chosen random seed. For example, if you want to run it with a random seed of 5. You can compile it by\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{import pandas as pd}
-\DoxyCodeLine{import numpy as np }
-\DoxyCodeLine{dir ='your directory/'}
-\DoxyCodeLine{file = 'Ads\_Optimisation.csv'}
-\DoxyCodeLine{adsDF = pd.read\_csv(dir+file)}
-\DoxyCodeLine{adsDF.head(2)}
+\DoxyCodeLine{python 1trial.py 5}
 \end{DoxyCode}
 
 
-Then you will need to find the probability of each ad. 10 ads will be split into 2 arrays. You will have two bandits.
+$>$Note that if you use a different random seed for 1trial.\+py, the evaluation results may be different due to reinforcement learning and strategies.
 
-
+If you want to run 10 trials of greedy-\/based strategies of your chosen random seed. You should compile it by\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{meansDF = adsDF.mean()}
-\DoxyCodeLine{newarr = np.array\_split(meansDF, 2)}
-\DoxyCodeLine{data = np.array([newarr[0], newarr[1]])}
-\DoxyCodeLine{data = np.negative([newarr[0], newarr[1]])}
-\DoxyCodeLine{data}
+\DoxyCodeLine{python 10trials.py}
 \end{DoxyCode}
 
 
-Your output data should look like this\+:
+If you want to run 20 trials of greedy-\/based strategies of your chosen random seed. Your command line should be\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python 20trials.py}
+\end{DoxyCode}
 
 
+For t-\/tests and A\+N\+O\+VA, you would want to run by\+:
 
-Now, you can compile explore\+First, epsilon\+Decreasing, and e\+Greedy strategies in the repo. Additionally, there are three different learning rates (0.\+001, 0.\+005, and 0.\+005) that you could test and compare the results. Because of the reinforcement learning and strategies, the evaluation results may be different.
 
-Feel free to email me at \href{mailto:ck2860@rit.edu}{\texttt{ ck2860@rit.\+edu}}.
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python StatsTests.py}
+\end{DoxyCode}
+
+
+Lastly, you can run a \mbox{\hyperlink{namespace_tukey}{Tukey}} Test by\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python Tukey.py}
+\end{DoxyCode}
+
+
+If you have any questions, please feel free to email me at \href{mailto:ck2860@rit.edu}{\texttt{ ck2860@rit.\+edu}}.
 
 Thanks for reading! 

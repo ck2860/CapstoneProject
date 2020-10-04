@@ -3,10 +3,10 @@ import tensorflow as tf
 import numpy as np
 import pandas as pd
 import sys
-## Documentation TESTING for exploreFirst (LR = 0.005) policy file
-
-## Documentation TESTING for the Contextual Bandit class
-# this class would start with a contextual bandit, get a bandit,  pull an arm functions
+##@package TENtrials
+## Documentation for 10trials.py
+#
+# 10 trials of evaluation are performed with 10 different random seeds. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.
 
 adsDF= pd.read_csv('data/Ads_Optimisation.csv')
 
@@ -15,9 +15,9 @@ newarr = np.array_split(meansDF, 2)
 data = np.array([newarr[0], newarr[1]])
 data = np.negative([newarr[0], newarr[1]])
 
+## Documentation for the Contextual Bandit class
+# this class initializes with a state, bandits, number of bandits, and number of actions
 class contextual_bandit():
-    ## create a new Contextual Bandit
-    # initialize with a state, bandits, number of bandits, and number of actions
     def __init__(self):
         # create a new Contextual Bandit
         self.state = 0 # The number of current bandit
