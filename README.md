@@ -97,6 +97,3 @@ python Tukey.py
 If you have any questions, please feel free to email me at ck2860@rit.edu. 
 
 Thanks for reading!
-
-
-
