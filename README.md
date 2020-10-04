@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 Main Page {#mainpage}
 =========
 # Contextual Bandit Methods
-We would solve contextual bandit problems, using a policy-gradient based reinforcement learning. We would evaluate seven different epsilon-based strategies. We have Epsilon-Greedy, Epsilon-Decreasing, and five different combinations of Epsilon-Greedy and Epsilon-Decreasing. We worked with the epsilon probability and episodes.  Five combinations were created! 
-=======
-# Contextual Bandits (HII)
-We would solve contextual bandit problems, using a policy-gradient based reinforcement learning. We would evaluate three different greedy strategies: Explore-First, Epsilon-Decreasing, and Epsilon-Greedy. 
->>>>>>> 1cc9cbb54ea20331e65a31850c1187dafb2867e3
+
+We would solve contextual bandit problems, using a policy-gradient based reinforcement learning. We would evaluate seven different epsilon-based strategies. We have Epsilon-Greedy, Epsilon-Decreasing, and five different combinations of Epsilon-Greedy and Epsilon-Decreasing. We tweaked with the epsilon probability and episodes.  Five combinations were created! 
 
 In the experiment, we have 10,000 episodes and use the learning rate of 0.05. The epsilon is the probability of exploration.
 
@@ -54,7 +50,7 @@ Note: It depends on your system. There are other commands that you can run with 
 
 There are two options that you could download the whole code. 
 1. Click "Code" green button and "download ZIP" on the top right hand on the repository page. 
-2. Clone a repository by git clone. 
+2. Clone a repository by performing git clone. 
 
 Once you have the files in your system/computer, you should see there are three different datasets: [Ads Optimisation](https://github.com/ck2860/CodeSubmissionS2/blob/master/data/Ads_Optimisation.csv), [Mean Rewards Results](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/MeanRewardsResults.csv), and [Tukey Data](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/TukeyData.csv), which are already provided in the data folder. You will be using them for this code project so make sure they are in the right folder -- data. When you run the python scripts, they should be able to find the datasets in the data folder. 
  
