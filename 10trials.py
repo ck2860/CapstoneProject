@@ -13,8 +13,7 @@ from ContextualBanditAgent import *
 from GreedyStrategies import *
 from Plot import *
 
-## @file 10trials.py
-#
+## @package TENTrials
 ## Documentation for 10trials.py
 # 10 trials of evaluation are performed with 10 different random seeds. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.
 # GreedyStrategies and Plot classes are used here. Please go to see Class tab for more details.
