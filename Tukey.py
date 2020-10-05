@@ -4,7 +4,8 @@ from statsmodels.stats.multicomp import pairwise_tukeyhsd
 import warnings
 warnings.filterwarnings("ignore")
 
-##@file Tukey.py
+## @package Tukey.py
+#
 #Documentation for Tukey.py
 # we use a Tukey post hoc analysis to confirm where the differences occurred between greedy-based strategies: Epsilon-Greedy, Epsilon-Decreasing, Hybrid#2, and Hybrid#4.
 # Statsmodels.stats.multicomp package is used; only pairwise_tukeyhsd function is performed.

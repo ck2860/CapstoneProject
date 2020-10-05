@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['20trials_2epy_2',['20trials.py',['../20trials_8py.html',1,'']]]
+  ['agent_1',['agent',['../class_contextual_bandit_agent_1_1agent.html',1,'ContextualBanditAgent']]]
 ];

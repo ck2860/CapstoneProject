@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tukey_20',['Tukey',['../namespace_tukey.html',1,'']]]
+  ['py_23',['py',['../namespacetrial_1_1py.html',1,'trial.py'],['../namespacetrials_1_1py.html',1,'trials.py'],['../namespace_tukey_1_1py.html',1,'Tukey.py']]]
 ];
