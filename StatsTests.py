@@ -1,8 +1,6 @@
 import pandas as pd
 import scipy.stats as stats
 
-## @file StatsTests.py
-#
 ## Documentation for StatsTest.py
 # we would be using t-tests and ANOVA for analysis. Script.stat package is used; ttest_ind and f_oneway functions are performed.
 # Null Hypothesis (H0): There is no significant difference between the strategies. Alternative Hypothesis (H1): There are significant differences between the strategies. We use 0.05 for the significant level.
