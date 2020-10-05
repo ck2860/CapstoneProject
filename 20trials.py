@@ -7,10 +7,13 @@ warnings.filterwarnings('ignore',category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 
 import tensorflow.compat.v1 as tf
+tf.logging.set_verbosity(tf.logging.ERROR)
+
 ##@package TWENTYtrials
 ## Documentation for 20trials.py
 #
 # 20 trials of evaluation were performed with 20 different random seeds.Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluations.
+# Tensorflow is used in Class Agent. Please go to see Class tab for more details.
 adsDF= pd.read_csv('data/Ads_Optimisation.csv')
 
 meansDF = adsDF.mean()

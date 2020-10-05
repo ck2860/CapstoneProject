@@ -35,13 +35,13 @@ You will need to have a couple of Python's libraries/packages: numPy, pandas, Te
 
 You will be able to run the programs in Anaconda prompt. 
 
-*Note: if you are able to run the programs or have those packages installed in a different software or environment. You can skip the Setup section or  (You could install the packages with Pip.)*
+*Note: if you are able to run the programs or have those packages installed in a different software or environment. Make sure your version of tensorflow is 1.14. You can skip the Setup section or  (You could install the packages with Pip.)*
                                             
 ## Setup
 You will be installing [Anaconda](http://anaconda.com/downloads) and required packages for this project. 
 Please download the right version for your system/computer.
  
-Recall that numPy, pandas,  matplotlibpyplot, and stats packages are already installed in Jupyter notebook, you only need to install TensorFlow 1.14. Using the Anaconda Prompt, it can be done by entering:
+Recall that numPy, pandas,  matplotlibpyplot, and stats packages are already installed in Anaconda, you only need to install TensorFlow 1.14. Using the Anaconda Prompt, it can be done by entering:
 
 ```
 conda install -c conda-forge tensorflow=1.14
@@ -52,8 +52,8 @@ Note: It depends on your system. There are other commands that you can run with 
 ## Instructions
 
 There are two options that you could download the whole code. 
-1. Click "Code" green button and "download ZIP" on the top right hand on the repository page. 
-2. Clone a repository by performing git clone. 
+1. Clicking "Code" green button and "download ZIP" on the top right hand on the Git repository page. 
+2. Cloning the Git repository by performing git clone. 
 
 Once you have the files in your system/computer, you should see there are three different datasets: [Ads Optimisation](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/Ads_Optimisation.csv), [Mean Rewards Results](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/MeanRewardsResult.csv), and [Tukey Data](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/TukeyData.csv), which are already provided in the data folder. You will be using them for this code project so make sure they are in the right folder -- data. When you run the python scripts, they should be able to find the datasets in the data folder. 
  

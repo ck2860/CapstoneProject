@@ -7,10 +7,13 @@ warnings.filterwarnings('ignore',category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 
 import tensorflow.compat.v1 as tf
+tf.logging.set_verbosity(tf.logging.ERROR)
+
 ##@package ONEtrial
 ## Documentation for 1trial.py
 #
 # 1 trial of evaluations is performed with your chosen random seed. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.
+# Tensorflow is used in Class Agent. Please go to see Class tab for more details.
 adsDF= pd.read_csv('data/Ads_Optimisation.csv')
 
 meansDF = adsDF.mean()
@@ -468,4 +471,4 @@ for column in df.drop('x', axis=1):
 # general title
 plt.suptitle("In comparison of mean rewards", fontsize=13, fontweight=0, color='black', style='italic', y=1.02)
 plt.show()
-print ("The python script is %s" % (sys.argv[0]), "and the trial # is %s" % (sys.argv[1]))
+print ("The python script is %s" % (sys.argv[0]), "and the random seed is %s" % (sys.argv[1]))
