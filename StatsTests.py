@@ -1,7 +1,7 @@
 import pandas as pd
 import scipy.stats as stats
 
-## @package StatsTests.py
+## @file StatsTests.py
 #
 ## Documentation for StatsTest.py
 # we would be using t-tests and ANOVA for analysis. Script.stat package is used; ttest_ind and f_oneway functions are performed.

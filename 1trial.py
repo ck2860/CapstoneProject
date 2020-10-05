@@ -13,7 +13,7 @@ from ContextualBanditAgent import *
 from GreedyStrategies import *
 from Plot import *
 
-## @package 1trial.py
+## @file 1trial.py
 #
 ## Documentation for 1trial.py
 # 1 trial of evaluations is performed with your chosen random seed. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.

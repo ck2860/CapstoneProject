@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['decreasingepsilon_3',['decreasingEpsilon',['../class_greedy_strategies_1_1_greedystrategies.html#afb68fe0c2de30057cc0dd2a1681aaeeb',1,'GreedyStrategies::Greedystrategies']]]
+  ['agent_4',['agent',['../class_contextual_bandit_agent_1_1agent.html',1,'ContextualBanditAgent']]]
 ];

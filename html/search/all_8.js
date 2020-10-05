@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['plot_14',['plot',['../class_plot_1_1plot.html',1,'Plot']]],
-  ['pullarm_15',['pullArm',['../class_contextual_bandit_1_1contextual__bandit.html#a15ebf69344de721c264db100dad488d0',1,'ContextualBandit::contextual_bandit']]]
+  ['hybrid1_11',['hybrid1',['../class_greedy_strategies_1_1_greedystrategies.html#a05301e09dc4fd3501a69eb48675bb768',1,'GreedyStrategies::Greedystrategies']]],
+  ['hybrid2_12',['hybrid2',['../class_greedy_strategies_1_1_greedystrategies.html#a3c327ade9300c9f09f93f62f5f77fac5',1,'GreedyStrategies::Greedystrategies']]],
+  ['hybrid3_13',['hybrid3',['../class_greedy_strategies_1_1_greedystrategies.html#a9b8af14b875a0c8e2dac51f783f10142',1,'GreedyStrategies::Greedystrategies']]],
+  ['hybrid4_14',['hybrid4',['../class_greedy_strategies_1_1_greedystrategies.html#a5dedf2198555f81842aa9a520737c9af',1,'GreedyStrategies::Greedystrategies']]],
+  ['hybrid5_15',['hybrid5',['../class_greedy_strategies_1_1_greedystrategies.html#aa2eeccdaeb8a8ceff313737cc753b831',1,'GreedyStrategies::Greedystrategies']]]
 ];

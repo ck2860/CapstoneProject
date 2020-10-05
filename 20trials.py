@@ -14,7 +14,7 @@ from Plot import *
 from GreedyStrategies import *
 
 
-## @package 20trials.py
+## @file 20trials.py
 #
 ## Documentation for 20trials.py
 # 20 trials of evaluation are performed with 20 different random seeds. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.
