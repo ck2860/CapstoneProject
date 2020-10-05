@@ -1,8 +1,12 @@
 import matplotlib.pyplot as plt
-import tensorflow as tf
 import numpy as np
 import pandas as pd
 import sys
+import warnings
+warnings.filterwarnings('ignore',category=FutureWarning)
+warnings.filterwarnings('ignore', category=DeprecationWarning)
+
+import tensorflow.compat.v1 as tf
 ##@package TWENTYtrials
 ## Documentation for 20trials.py
 #

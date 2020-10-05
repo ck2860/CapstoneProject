@@ -29,6 +29,8 @@ All of the strategies are in the evaluation code. The reinforcement learning cod
 * Instructions
 
 ## Requirements
+Since all the code are written in Python, you should have or download [Python](https://www.python.org/downloads/). 
+
 You will need to have a couple of Python's libraries/packages: numPy, pandas, Tensorflow, matplotlibpyplot, scipy.stats, and atsmodels.stats.multicomp. Most of the packages are pre-installed in Anaconda.
 
 You will be able to run the programs in Anaconda prompt. 
@@ -39,10 +41,10 @@ You will be able to run the programs in Anaconda prompt.
 You will be installing [Anaconda](http://anaconda.com/downloads) and required packages for this project. 
 Please download the right version for your system/computer.
  
-Recall that numPy, pandas,  matplotlibpyplot, and stats packages are already installed in Jupyter notebook, you only need to install TensorFlow. Using the Anaconda Prompt, it can be done by entering:
+Recall that numPy, pandas,  matplotlibpyplot, and stats packages are already installed in Jupyter notebook, you only need to install TensorFlow 1.14. Using the Anaconda Prompt, it can be done by entering:
 
 ```
-$ conda install -c conda-forge tensorflow
+conda install -c conda-forge tensorflow=1.14
 ```
 Note: It depends on your system. There are other commands that you can run with conda. Please read more about [Tensorflow Installment](https://anaconda.org/conda-forge/tensorflow). 
 
