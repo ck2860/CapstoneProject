@@ -51,8 +51,8 @@ class contextual_bandit():
             #return a negative reward.
             return -1
 
-## Documentation for the agent class
-# this class sets up a contextual bandit agent via building a feed-forward in the network and training/updating the network.
+## Documentation for the Agent class
+# This class sets up a contextual bandit agent via building a feed-forward in the network and training/updating the network. It would either return positive or negative reward.  Positive reinforcement is a reward for picking the most optimal arm; negative reinforcement is a penalty for not picking the best arm.
 class agent():
     ## create a new agent
     # The agent would have a learning rate, the size of a state, and the size of actions.
