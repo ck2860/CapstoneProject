@@ -423,7 +423,7 @@ df7Ameans = df7aa.mean(0)
 test7=df7a
 # test7.to_csv(r'C:\Users\Condy\Desktop\test1plan5.csv', index = False, header=True)
 
-df=pd.DataFrame({'x': df1a['x'], 'Decreasing Epsilon': df1Ameans , 'Greedy Epsilon': df2Ameans, 'Hybrid #1': df3Ameans, 'Hybrid #2': df4Ameans , 'Hybrid#3': df5Ameans, 'Hybrid#4': df6Ameans, 'Hybrid#5':df7Ameans})
+df=pd.DataFrame({'x': df1a['x'], 'Epsilon-Decreasing': df1Ameans , 'Epsilon-Greedy': df2Ameans, 'Hybrid #1': df3Ameans, 'Hybrid #2': df4Ameans , 'Hybrid#3': df5Ameans, 'Hybrid#4': df6Ameans, 'Hybrid#5':df7Ameans})
 
 # Initialize the figure
 plt.style.use('seaborn-darkgrid')
