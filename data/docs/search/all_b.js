@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['statstests_2epy_19',['StatsTests.py',['../_stats_tests_8py.html',1,'']]]
+  ['tentrials_18',['TENTrials',['../namespace_t_e_n_trials.html',1,'']]],
+  ['tukey_19',['Tukey',['../namespace_tukey.html',1,'']]],
+  ['twentytrials_20',['TwentyTrials',['../namespace_twenty_trials.html',1,'']]]
 ];

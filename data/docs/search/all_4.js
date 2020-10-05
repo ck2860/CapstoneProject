@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['contextual_5fbandit_5',['contextual_bandit',['../class_contextual_bandit_1_1contextual__bandit.html',1,'ContextualBandit']]]
+  ['epsilongreedy_4',['EpsilonGreedy',['../class_greedy_strategies_1_1_greedystrategies.html#a66cc1790772c7de45325c64a068c9521',1,'GreedyStrategies::Greedystrategies']]]
 ];
