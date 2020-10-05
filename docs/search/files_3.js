@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['greedystrategies_2epy_34',['GreedyStrategies.py',['../_greedy_strategies_8py.html',1,'']]]
+  ['tukey_2epy_29',['Tukey.py',['../_tukey_8py.html',1,'']]]
 ];

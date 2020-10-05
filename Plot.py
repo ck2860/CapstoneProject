@@ -9,16 +9,20 @@ warnings.filterwarnings('ignore', category=DeprecationWarning)
 import tensorflow.compat.v1 as tf
 tf.logging.set_verbosity(tf.logging.ERROR)
 
-##@file Plot.py
-#
-
 ## Documentation for plot class
 # this class has a graph function that you will be using for evaluations.
 class plot():
     ## Documentation for graph function
     # Plot the x and y values for graphing and returns the graph of evaluation
-    ##@param a1: random seed
-    ##@parm df1a: initialized dataframe
+    ##@param df1a: any dataframe
+    ##@parm df1Ameans: Decreasing-Epsilon means rewards
+    ##@parm df2Ameans: Greedy-Epsilon means rewards
+    ##@parm df3Ameans: Hybrid#1 means rewards
+    ##@parm df4Ameans: Hybrid#2 means rewards
+    ##@parm df5Ameans: Hybrid#3 means rewards
+    ##@parm df6Ameans: Hybrid#4 means rewards
+    ##@parm df7Ameans: Hybrid#5 means rewards
+
     def graph(self, df1a, df1Ameans, df2Ameans, df3Ameans, df4Ameans, df5Ameans, df6Ameans, df7Ameans):
         df=pd.DataFrame({'x': df1a['x'], 'Epsilon-Decreasing': df1Ameans, 'Epsilon-Greedy': df2Ameans, 'Hybrid #1': df3Ameans, 'Hybrid #2': df4Ameans , 'Hybrid#3': df5Ameans, 'Hybrid#4': df6Ameans, 'Hybrid#5':df7Ameans})
 

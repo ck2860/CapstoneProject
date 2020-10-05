@@ -2,7 +2,7 @@ var indexSectionsWithContent =
 {
   0: "12_acdeghmpst",
   1: "acgp",
-  2: "12cgpst",
+  2: "12st",
   3: "_deghp",
   4: "m"
 };

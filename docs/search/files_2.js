@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['contextualbandit_2epy_32',['ContextualBandit.py',['../_contextual_bandit_8py.html',1,'']]],
-  ['contextualbanditagent_2epy_33',['ContextualBanditAgent.py',['../_contextual_bandit_agent_8py.html',1,'']]]
+  ['statstests_2epy_28',['StatsTests.py',['../_stats_tests_8py.html',1,'']]]
 ];

@@ -16,9 +16,6 @@ newarr = np.array_split(meansDF, 2)
 data = np.array([newarr[0], newarr[1]])
 data = np.negative([newarr[0], newarr[1]])
 
-##@file contextualbandit.py
-
-
 ## Documentation for Contextual Bandit class
 # this class initializes with a state, bandits, number of bandits, and number of actions
 class contextual_bandit():
