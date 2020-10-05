@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tukey_15',['tukey',['../namespace_tukey.html#ae1dc48c583bc5d2319cb0cd825cd29f6',1,'Tukey']]]
+  ['cbandit_41',['cBandit',['../20trials_8py.html#a1464d97a03937c6c6a345f919b2ff120',1,'20trials']]]
 ];

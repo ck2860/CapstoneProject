@@ -1,10 +1,10 @@
 import pandas as pd
 import scipy.stats as stats
 
-##@package StatsTest
-#Documentation for StatsTest.py
+##@file StatsTests.py
+## Documentation for StatsTest.py
 #
-# we would be using t-tests and ANOVA for analysis.No classes are created here. Script.stat package is used; ttest_ind and f_oneway functions are performed.
+# we would be using t-tests and ANOVA for analysis. Script.stat package is used; ttest_ind and f_oneway functions are performed.
 # Null Hypothesis (H0): There is no significant difference between the strategies. Alternative Hypothesis (H1): There are significant differences between the strategies. We use 0.05 for the significant level.
 df= pd.read_csv('data/MeanRewardsResult.csv')
 t_test = stats.ttest_ind(df['EGreedy'], df['EDecreasing'])

@@ -1,0 +1,32 @@
+\hypertarget{_stats_tests_8py}{}\doxysection{Stats\+Tests.\+py File Reference}
+\label{_stats_tests_8py}\index{StatsTests.py@{StatsTests.py}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_stats_tests_8py_a2ac6b4c33d68d7cc7b58f464fdc0f9a5}\label{_stats_tests_8py_a2ac6b4c33d68d7cc7b58f464fdc0f9a5}} 
+{\bfseries Stats\+Tests.\+df} = pd.\+read\+\_\+csv(\textquotesingle{}data/Mean\+Rewards\+Result.\+csv\textquotesingle{})
+\item 
+\mbox{\Hypertarget{_stats_tests_8py_a3b1876b10e4b11a6ce4c517eb4c06e9e}\label{_stats_tests_8py_a3b1876b10e4b11a6ce4c517eb4c06e9e}} 
+{\bfseries Stats\+Tests.\+t\+\_\+test} = stats.\+ttest\+\_\+ind(df\mbox{[}\textquotesingle{}E\+Greedy\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}E\+Decreasing\textquotesingle{}\mbox{]})
+\item 
+\mbox{\Hypertarget{_stats_tests_8py_a2ffa43e16566d395787fbfd0e70d1cfb}\label{_stats_tests_8py_a2ffa43e16566d395787fbfd0e70d1cfb}} 
+{\bfseries Stats\+Tests.\+A\+N\+O\+V\+A1} = stats.\+f\+\_\+oneway(df\mbox{[}\textquotesingle{}E\+Greedy\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}E\+Decreasing\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}Hybrid1\textquotesingle{}\mbox{]})
+\item 
+\mbox{\Hypertarget{_stats_tests_8py_a54c55d8dd54d668d7161bd56edcde409}\label{_stats_tests_8py_a54c55d8dd54d668d7161bd56edcde409}} 
+{\bfseries Stats\+Tests.\+A\+N\+O\+V\+A2} = stats.\+f\+\_\+oneway(df\mbox{[}\textquotesingle{}E\+Greedy\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}E\+Decreasing\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}Hybrid2\textquotesingle{}\mbox{]})
+\item 
+\mbox{\Hypertarget{_stats_tests_8py_aa8437c1eeb031c379994963c228ab63d}\label{_stats_tests_8py_aa8437c1eeb031c379994963c228ab63d}} 
+{\bfseries Stats\+Tests.\+A\+N\+O\+V\+A3} = stats.\+f\+\_\+oneway(df\mbox{[}\textquotesingle{}E\+Greedy\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}E\+Decreasing\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}Hybrid3\textquotesingle{}\mbox{]})
+\item 
+\mbox{\Hypertarget{_stats_tests_8py_a76f9a4edaaf0b48b89d85b50ed67f9d1}\label{_stats_tests_8py_a76f9a4edaaf0b48b89d85b50ed67f9d1}} 
+{\bfseries Stats\+Tests.\+A\+N\+O\+V\+A4} = stats.\+f\+\_\+oneway(df\mbox{[}\textquotesingle{}E\+Greedy\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}E\+Decreasing\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}Hybrid4\textquotesingle{}\mbox{]})
+\item 
+\mbox{\Hypertarget{_stats_tests_8py_a0c8e72adb215c4cf7b07946faae070f2}\label{_stats_tests_8py_a0c8e72adb215c4cf7b07946faae070f2}} 
+{\bfseries Stats\+Tests.\+A\+N\+O\+V\+A5} = stats.\+f\+\_\+oneway(df\mbox{[}\textquotesingle{}E\+Greedy\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}E\+Decreasing\textquotesingle{}\mbox{]}, df\mbox{[}\textquotesingle{}Hybrid5\textquotesingle{}\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Documentation for Stats\+Test.\+py
+
+we would be using t-\/tests and A\+N\+O\+VA for analysis. Script.\+stat package is used; ttest\+\_\+ind and f\+\_\+oneway functions are performed. Null Hypothesis (H0)\+: There is no significant difference between the strategies. Alternative Hypothesis (H1)\+: There are significant differences between the strategies. We use 0.\+05 for the significant level. 

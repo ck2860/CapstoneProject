@@ -1,0 +1,17 @@
+\hypertarget{_tukey_8py}{}\doxysection{Tukey.\+py File Reference}
+\label{_tukey_8py}\index{Tukey.py@{Tukey.py}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_tukey_8py_a13b5cd4820404b99117f092e66b1ce20}\label{_tukey_8py_a13b5cd4820404b99117f092e66b1ce20}} 
+{\bfseries Tukey.\+df1} = pd.\+read\+\_\+csv(\textquotesingle{}data/Tukey\+Data.\+csv\textquotesingle{})
+\item 
+\mbox{\Hypertarget{_tukey_8py_ae1dc48c583bc5d2319cb0cd825cd29f6}\label{_tukey_8py_ae1dc48c583bc5d2319cb0cd825cd29f6}} 
+{\bfseries Tukey.\+tukey} = pairwise\+\_\+tukeyhsd(endog=df1\mbox{[}\textquotesingle{}Mean\+Rewards\textquotesingle{}\mbox{]}, groups=df1\mbox{[}\textquotesingle{}Strategy\textquotesingle{}\mbox{]}, alpha=0.\+05)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Documentation for \mbox{\hyperlink{_tukey_8py}{Tukey.\+py}}
+
+we use a Tukey post hoc analysis to confirm where the differences occurred between greedy-\/based strategies\+: Epsilon-\/\+Greedy, Epsilon-\/\+Decreasing, Hybrid\#2, and Hybrid\#4. Statsmodels.\+stats.\+multicomp package is used; only pairwise\+\_\+tukeyhsd function is performed. 
