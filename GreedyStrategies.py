@@ -22,7 +22,7 @@ class Greedystrategies():
     ## Documentation for Decreasing Epsilon function
     # this would return the rewards of Decreasing Epsilon
     ##@param a1: random seed
-    ##@parm df1a: initialized dataframe
+    ##@param df1a: initialized dataframe
     def decreasingEpsilon(self, a1, df1a):
         for a in range(self.numberOfTrials):
             tf.reset_default_graph()
@@ -68,7 +68,7 @@ class Greedystrategies():
     ## Documentation for Epsilon-Greedy function
     # this would return the rewards of Epsilon-Greedy
     ##@param b: random seed
-    ##@parm df2a: initialized dataframe
+    ##@param df2a: initialized dataframe
     def EpsilonGreedy(self, b, df2a):
         for a in range(self.numberOfTrials):
             tf.reset_default_graph()
@@ -112,7 +112,7 @@ class Greedystrategies():
     ## Documentation for Hybrid #1 function
     # this would return the rewards of Hybrid #1
     ##@param c: random seed
-    ##@parm df3a: initialized dataframe
+    ##@param df3a: initialized dataframe
     def hybrid1(self, c, df3a):
         for a in range(self.numberOfTrials):
             #hybrid #1
@@ -157,7 +157,7 @@ class Greedystrategies():
     ## Documentation for Hybrid #2 function
     # this would return the rewards of Hybrid #2
     ##@param d: random seed
-    ##@parm df4a: initialized dataframe
+    ##@param df4a: initialized dataframe
     def hybrid2(self, d, df4a):
         for a in range(self.numberOfTrials):
             tf.reset_default_graph()
@@ -207,7 +207,7 @@ class Greedystrategies():
     ## Documentation for Hybrid #3 function
     # this would return the rewards of Hybrid #3
     ##@param e1: random seed
-    ##@parm df5a: initialized dataframe
+    ##@param df5a: initialized dataframe
     def hybrid3(self, e1, df5a):
         for a in range(self.numberOfTrials):
             #Hybrid#3
@@ -260,7 +260,7 @@ class Greedystrategies():
     ## Documentation for Hybrid #4 function
     # this would return the rewards of Hybrid #4
     ##@param f: random seed
-    ##@parm df6a: initialized dataframe
+    ##@param df6a: initialized dataframe
     def hybrid4(self, f,df6a):
         for a in range(self.numberOfTrials):
             #Hybrid#4
@@ -310,7 +310,7 @@ class Greedystrategies():
     ## Documentation for Hybrid #5 function
     # this would return the rewards of Hybrid #5
     ##@param g: random seed
-    ##@parm df7a: initialized dataframe
+    ##@param df7a: initialized dataframe
     def hybrid5(self, g,df7a):
         for a in range(self.numberOfTrials):
             #Hybrid#5
