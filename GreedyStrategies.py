@@ -62,7 +62,7 @@ class Greedystrategies():
                     e-=0.0001 #in the end it would be highly exploitative
                     i+=1
                 a1+=1
-                print("Epsilon-Decreasing is done!")
+                print("Trial#", a+1, ": Epsilon-Decreasing is done! ")
         return df1a
 
     ## Documentation for Epsilon-Greedy function
@@ -106,7 +106,7 @@ class Greedystrategies():
                         print("Epsilon-Greedy mean rewards: " + str(meanR[0]) + " at the episode of "+ str(i))
                     i+=1
                 b+=1
-                print("Epsilon-Greedy is done!")
+                print("Trial#", a+1, ": Epsilon-Greedy is done!")
         return df2a
 
     ## Documentation for Hybrid #1 function
@@ -151,7 +151,7 @@ class Greedystrategies():
                     e-=0.00008 #in the end it would be highly exploitative (10% explore, 90% exploit)
                     i+=1
                 c+=1
-                print("Hybrid#1 is done!")
+                print("Trial#", a+1, ": Hybrid#1 is done!")
         return df3a
 
     ## Documentation for Hybrid #2 function
@@ -201,7 +201,7 @@ class Greedystrategies():
                         e = 0.1
                     i+=1
                 d+=1
-                print("Hybrid#2 is done!")
+                print("Trial#", a+1, ": Hybrid#2 is done!")
         return df4a
 
     ## Documentation for Hybrid #3 function
@@ -254,7 +254,7 @@ class Greedystrategies():
                         e = 0.1
                     i+=1
                 e1+=1
-                print("Hybrid#3 is done!")
+                print("Trial#", a+1, ": Hybrid#3 is done!")
         return df5a
 
     ## Documentation for Hybrid #4 function
@@ -304,7 +304,7 @@ class Greedystrategies():
                         e = 0.1
                     i+=1
                 f+=1
-                print("Hybrid#4 is done!")
+                print("Trial#", a+1, ": Hybrid#4 is done!")
         return df6a
 
     ## Documentation for Hybrid #5 function
@@ -358,5 +358,5 @@ class Greedystrategies():
                         e = 0.1
                     i+=1
                 g+=1
-                print("Hybrid#5 is done!")
+                print("Trial#", a+1, ": Hybrid#5 is done!")
         return df7a

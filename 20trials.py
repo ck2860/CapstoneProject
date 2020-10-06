@@ -42,9 +42,6 @@ df5a = trial20.hybrid3(e1, df5a)
 df6a = trial20.hybrid4(f, df6a)
 df7a = trial20.hybrid5(g, df7a)
 
-df1aa = pd.DataFrame(df1a['y'].values.reshape(10,20))
-df1Ameans = df1aa.mean(0)
-
 df1aa = pd.DataFrame(df1a['y'].values.reshape(20,20))
 df1Ameans = df1aa.mean(0)
 
@@ -59,7 +56,6 @@ df4Ameans = df4aa.mean(0)
 
 df5aa = pd.DataFrame(df5a['y'].values.reshape(20,20))
 df5Ameans = df5aa.mean(0)
-
 
 df6aa = pd.DataFrame(df6a['y'].values.reshape(20,20))
 df6Ameans = df6aa.mean(0)
