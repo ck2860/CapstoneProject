@@ -24,7 +24,7 @@ All of the strategies are in the evaluation code. The reinforcement learning cod
 \item Setup
 \item Instructions
 \end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{Requirements}\label{index_autotoc_md2}
-Since all the code are written in Python, you should have or download \href{https://www.python.org/downloads/}{\texttt{ Python}}.
+Since all the code are written in Python, you should have or download \href{https://www.python.org/downloads/}{\texttt{ Python}}. Your Python version should be 3.\+5-\/3.\+8.
 
 You will need to have a couple of Python\textquotesingle{}s libraries/packages\+: num\+Py, pandas, Tensorflow, matplotlibpyplot, scipy.\+stats, and atsmodels.\+stats.\+multicomp. Most of the packages are pre-\/installed in Anaconda.
 
@@ -50,7 +50,7 @@ There are two options that you could download the whole code.
 
 Once you have the files in your system/computer, you should see there are three different datasets\+: \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/Ads_Optimisation.csv}{\texttt{ Ads Optimisation}}, \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/MeanRewardsResult.csv}{\texttt{ Mean Rewards Results}}, and \href{https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/TukeyData.csv}{\texttt{ Tukey Data}}, which are already provided in the data folder. You will be using them for this code project so make sure they are in the right folder -- data. When you run the python codes, they should be able to find the datasets in the data folder.
 
-The Ads Optimisation data set is obtained from \href{https://www.kaggle.com/akram24/ads-ctr-optimisation}{\texttt{ Kaggle}}. You will be using this for reinforcement learning and evaluations.
+The Ads Optimisation data set is obtained from \href{https://www.kaggle.com/akram24/ads-ctr-optimisation}{\texttt{ Kaggle}}. You will be using this for reinforcement learning and evaluations. For the evaluation, the ads are narrowed down to 5 ads so our reinforcement agent has five ads (Ad\#0 -\/ Ad\#4) to select.
 
 Both Mean\+Rewards\+Result and Tukey\+Data datasets are the results from the evaluations with 20 random seeds (\#1-\/\#20). The Mean Rewards Result data is used for T-\/tests and A\+N\+O\+VA. Lastly, the Tukey\+Data is used for the \mbox{\hyperlink{namespace_tukey}{Tukey}}\textquotesingle{}s Post Hoc Test.
 

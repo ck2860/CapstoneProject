@@ -28,7 +28,7 @@ All of the strategies are in the evaluation code. The reinforcement learning cod
 * Instructions
 
 ## Requirements
-Since all the code are written in Python, you should have or download [Python](https://www.python.org/downloads/). 
+Since all the code are written in Python, you should have or download [Python](https://www.python.org/downloads/).  Your Python version should be 3.5-3.8.
 
 You will need to have a couple of Python's libraries/packages: numPy, pandas, Tensorflow, matplotlibpyplot, scipy.stats, and atsmodels.stats.multicomp. Most of the packages are pre-installed in Anaconda.
 
@@ -56,7 +56,7 @@ There are two options that you could download the whole code.
 
 Once you have the files in your system/computer, you should see there are three different datasets: [Ads Optimisation](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/Ads_Optimisation.csv), [Mean Rewards Results](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/MeanRewardsResult.csv), and [Tukey Data](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/TukeyData.csv), which are already provided in the data folder. You will be using them for this code project so make sure they are in the right folder -- data. When you run the python codes, they should be able to find the datasets in the data folder. 
  
- The Ads Optimisation data set is obtained from [Kaggle](https://www.kaggle.com/akram24/ads-ctr-optimisation).  You will be using this for reinforcement learning and evaluations. 
+ The Ads Optimisation data set is obtained from [Kaggle](https://www.kaggle.com/akram24/ads-ctr-optimisation).  You will be using this for reinforcement learning and evaluations. For the evaluation, the ads are narrowed down to 5 ads so our reinforcement agent has five ads (Ad#0 - Ad#4) to select.
  
 Both MeanRewardsResult and TukeyData datasets are the results from the evaluations with 20 random seeds (#1-#20). The Mean Rewards Result data is used for T-tests and ANOVA. Lastly, the TukeyData is used for the Tukey's Post Hoc Test. 
 

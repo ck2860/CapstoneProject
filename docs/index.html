@@ -86,7 +86,7 @@ Table of contents</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Requirements</h2>
-<p>Since all the code are written in Python, you should have or download <a href="https://www.python.org/downloads/">Python</a>.</p>
+<p>Since all the code are written in Python, you should have or download <a href="https://www.python.org/downloads/">Python</a>. Your Python version should be 3.5-3.8.</p>
 <p>You will need to have a couple of Python's libraries/packages: numPy, pandas, Tensorflow, matplotlibpyplot, scipy.stats, and atsmodels.stats.multicomp. Most of the packages are pre-installed in Anaconda.</p>
 <p>You will be able to run the programs in Anaconda prompt.</p>
 <p><em>Note: if you are able to run the programs or have those packages installed in a different software or environment. Make sure your version of tensorflow is 1.14. You can skip the Setup section or (You could install the packages with Pip.)</em></p>
@@ -103,7 +103,7 @@ Instructions</h2>
 <li>Cloning the Git repository by performing git clone.</li>
 </ol>
 <p>Once you have the files in your system/computer, you should see there are three different datasets: <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/Ads_Optimisation.csv">Ads Optimisation</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/MeanRewardsResult.csv">Mean Rewards Results</a>, and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/TukeyData.csv">Tukey Data</a>, which are already provided in the data folder. You will be using them for this code project so make sure they are in the right folder &ndash; data. When you run the python codes, they should be able to find the datasets in the data folder.</p>
-<p>The Ads Optimisation data set is obtained from <a href="https://www.kaggle.com/akram24/ads-ctr-optimisation">Kaggle</a>. You will be using this for reinforcement learning and evaluations.</p>
+<p>The Ads Optimisation data set is obtained from <a href="https://www.kaggle.com/akram24/ads-ctr-optimisation">Kaggle</a>. You will be using this for reinforcement learning and evaluations. For the evaluation, the ads are narrowed down to 5 ads so our reinforcement agent has five ads (Ad#0 - Ad#4) to select.</p>
 <p>Both MeanRewardsResult and TukeyData datasets are the results from the evaluations with 20 random seeds (#1-#20). The Mean Rewards Result data is used for T-tests and ANOVA. Lastly, the TukeyData is used for the <a class="el" href="namespace_tukey.html">Tukey</a>'s Post Hoc Test.</p>
 <p><em>Please make sure they all are in the same directory so the codes would be able to recognize the data sets from the data folder. For this reinforcement learning, the data set can be used in online advertising to determine which is the best ad to show the user. It does not mean they would work with other bandit problems.</em></p>
 <p>We have classes in the folder that would be utilized in the running codes. <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/ContextualBandit.py">ContextualBandit</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/ContextualBanditAgent.py">ContextualBanditAgent</a>, and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/GreedyStrategies.py">GreedyStrategies</a> are for the evaluations. It would set contextual bandits up, run reinforcement learning, and use greedy-based strategies. Finally, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Plot.py">Plot</a> is programmed to plot evaluation results.</p>
