@@ -5,10 +5,10 @@ import scipy.stats as stats
 ## Documentation for StatsTest.py
 # we would be using t-tests and ANOVA for analysis. Script.stat package is used; ttest_ind and f_oneway functions are performed.
 # Null Hypothesis (H0): There is no significant difference between the strategies. Alternative Hypothesis (H1): There are significant differences between the strategies. We use 0.05 for the significant level.
-df= pd.read_csv('data/MeanRewardsResult.csv')
+df = pd.read_csv('data/MeanRewardsResult.csv')
 t_test = stats.ttest_ind(df['EGreedy'], df['EDecreasing'])
-ANOVA1= stats.f_oneway(df['EGreedy'], df['EDecreasing'], df['Hybrid1'])
-ANOVA2 =stats.f_oneway(df['EGreedy'], df['EDecreasing'], df['Hybrid2'])
+ANOVA1 = stats.f_oneway(df['EGreedy'], df['EDecreasing'], df['Hybrid1'])
+ANOVA2 = stats.f_oneway(df['EGreedy'], df['EDecreasing'], df['Hybrid2'])
 ANOVA3 = stats.f_oneway(df['EGreedy'], df['EDecreasing'], df['Hybrid3'])
 ANOVA4 = stats.f_oneway(df['EGreedy'], df['EDecreasing'], df['Hybrid4'])
 ANOVA5 = stats.f_oneway(df['EGreedy'], df['EDecreasing'], df['Hybrid5'])
