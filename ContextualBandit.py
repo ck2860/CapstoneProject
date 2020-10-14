@@ -1,11 +1,11 @@
+import warnings
+warnings.filterwarnings('ignore', category=FutureWarning)
+warnings.filterwarnings('ignore', category=DeprecationWarning)
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sys
-import warnings
 import tensorflow.compat.v1 as tf
-warnings.filterwarnings('ignore', category=FutureWarning)
-warnings.filterwarnings('ignore', category=DeprecationWarning)
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 adsDF = pd.read_csv('data/Ads_Optimisation.csv')

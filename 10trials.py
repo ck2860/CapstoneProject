@@ -1,11 +1,11 @@
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import sys
 import warnings
 warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import sys
 import tensorflow.compat.v1 as tf
 tf.logging.set_verbosity(tf.logging.ERROR)
 from ContextualBandit import *
