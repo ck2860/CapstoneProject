@@ -21,7 +21,7 @@ from InitializeTensor import *
 # ContextualBandit and ContextualBanditAgent classes are used here. Please go to see Class tab for more details.
 
 
-class Greedystrategies():
+class greedyStrategies():
     def __init__(self, n):
         self.numberOfTrials = n
 
@@ -33,6 +33,7 @@ class Greedystrategies():
         for a in range(self.numberOfTrials):
             cBandit, myAgent, weights, total_episodes, total_reward, init = initializeTensor()
             e = 1  # start with highly explorative (100% explore, 0% exploit)
+            value = 0.0001  # the value that we will decrement the epsilon
             # Launch the tensorflow graph
             with tf.Session() as sess:
                 sess.run(init)
@@ -46,7 +47,7 @@ class Greedystrategies():
                         meanR = np.mean(total_reward, axis=1)
                         df1a = df1a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
                         # print("Epsilon-Decreasing mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
-                    e -= 0.0001  # in the end it would be highly exploitative
+                    e -= value  # in the end it would be highly exploitative
                     i += 1
                 a1 += 1
                 print("Trial#", a + 1, ": Epsilon-Decreasing is done! ")
@@ -56,11 +57,10 @@ class Greedystrategies():
     # this would return the rewards of Epsilon-Greedy
     ##@param b: random seed
     ##@param df2a: initialized dataframe
-    def EpsilonGreedy(self, b, df2a):
+    def epsilonGreedy(self, b, df2a):
         for a in range(self.numberOfTrials):
             cBandit, myAgent, weights, total_episodes, total_reward, init = initializeTensor()
             e = 0.1  # this is the probability of the agent to explore. 10% to explore and 90% of exploit
-
             # Launch the tensorflow graph
             with tf.Session() as sess:
                 sess.run(init)
@@ -87,6 +87,7 @@ class Greedystrategies():
         for a in range(self.numberOfTrials):
             cBandit, myAgent, weights, total_episodes, total_reward, init = initializeTensor()
             e = 0.9  # start with highly explorative (90% explore, 10% exploit)
+            value = 0.00008  # the value that we will decrement the epsilon
             # Launch the tensorflow graph
             with tf.Session() as sess:
                 sess.run(init)
@@ -100,7 +101,7 @@ class Greedystrategies():
                         meanR = np.mean(total_reward, axis=1)
                         df3a = df3a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
                         # print("Hybrid#1 mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
-                    e -= 0.00008  # in the end it would be highly exploitative (10% explore, 90% exploit)
+                    e -= value  # in the end it would be highly exploitative (10% explore, 90% exploit)
                     i += 1
                 c += 1
                 print("Trial#", a + 1, ": Hybrid#1 is done!")
@@ -114,6 +115,7 @@ class Greedystrategies():
         for a in range(self.numberOfTrials):
             cBandit, myAgent, weights, total_episodes, total_reward, init = initializeTensor()
             e = 1  # start with highly explorative (90% explore, 10% exploit)
+            value = 0.00018  # the value that we will decrement the epsilon
             # Launch the tensorflow graph
             with tf.Session() as sess:
                 sess.run(init)
@@ -127,7 +129,7 @@ class Greedystrategies():
                         meanR = np.mean(total_reward, axis=1)
                         df4a = df4a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
                         # print("Hybrid#2 mean rewards: " + str(meanR[0]) + " at the episode of "+ str(i))
-                    e -= 0.00018  # in the end it would be highly exploitative (10% explore, 90% exploit)
+                    e -= value  # in the end it would be highly exploitative (10% explore, 90% exploit)
                     if e < 0.1:
                         e = 0.1
                     i += 1
@@ -143,6 +145,7 @@ class Greedystrategies():
         for a in range(self.numberOfTrials):
             cBandit, myAgent, weights, total_episodes, total_reward, init = initializeTensor()
             e = 0.9  # start with highly explorative (90% explore, 10% exploit)
+            value = 0.00016  # the value that we will decrement the epsilon
             # Launch the tensorflow graph
             with tf.Session() as sess:
                 sess.run(init)
@@ -156,7 +159,7 @@ class Greedystrategies():
                         meanR = np.mean(total_reward, axis=1)
                         df5a = df5a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
                         # print("Hybrid#3 mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
-                    e -= 0.00016  # in the end it would be highly exploitative (10% explore, 90% exploit)
+                    e -= value  # in the end it would be highly exploitative (10% explore, 90% exploit)
                     if e < 0.1:
                         e = 0.1
                     i += 1
@@ -172,7 +175,7 @@ class Greedystrategies():
         for a in range(self.numberOfTrials):
             cBandit, myAgent, weights, total_episodes, total_reward, init = initializeTensor()
             e = 1  # start with highly explorative (90% explore, 10% exploit)
-
+            value = 0.00036  # the value that we will decrement the epsilon
             # Launch the tensorflow graph
             with tf.Session() as sess:
                 sess.run(init)
@@ -186,7 +189,7 @@ class Greedystrategies():
                         meanR = np.mean(total_reward, axis=1)
                         df6a = df6a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
                         # print("Hybrid#4 mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
-                    e -= 0.00036  # in the end it would be highly exploitative (10% explore, 90% exploit)
+                    e -= value  # in the end it would be highly exploitative (10% explore, 90% exploit)
                     if e < 0.1:
                         e = 0.1
                     i += 1
@@ -202,8 +205,7 @@ class Greedystrategies():
         for a in range(self.numberOfTrials):
             cBandit, myAgent, weights, total_episodes, total_reward, init = initializeTensor()
             e = 0.9  # start with highly explorative (90% explore, 10% exploit)
-            init = tf.global_variables_initializer()
-
+            value = 0.00032  # the value that we will decrement the epsilon
             # Launch the tensorflow graph
             with tf.Session() as sess:
                 sess.run(init)
@@ -217,7 +219,7 @@ class Greedystrategies():
                         meanR = np.mean(total_reward, axis=1)
                         df7a = df7a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
                         # print("Hybrid#5 mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
-                    e -= 0.00032  # in the end it would be highly exploitative (10% explore, 90% exploit)
+                    e -= value  # in the end it would be highly exploitative (10% explore, 90% exploit)
                     if e < 0.1:
                         e = 0.1
                     i += 1

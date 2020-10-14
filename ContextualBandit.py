@@ -25,7 +25,6 @@ class contextual_bandit():
     def __init__(self):
         self.state = 0  # The number of current bandit
         self.bandits = np.array(data)
-        #self.bandits = np.random.uniform(low=-10, high=10, size=(4,4))
         self.num_bandits = self.bandits.shape[0]  # the bandit number
         self.num_actions = self.bandits.shape[1]  # the action number
 

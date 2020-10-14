@@ -14,10 +14,10 @@ from GreedyStrategies import *
 from Plot import *
 
 ## @package TENTrials
-## Documentation for 10trials.py
+## Documentation for TenTrials.py
 # 10 trials of evaluation are performed with 10 different random seeds. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.
 # GreedyStrategies and Plot classes are used here. Please go to see Class tab for more details.
-
+number = 1
 df1a = pd.DataFrame({'x': [], 'y': []})
 df2a = pd.DataFrame({'x': [], 'y': []})
 df3a = pd.DataFrame({'x': [], 'y': []})
@@ -25,17 +25,17 @@ df4a = pd.DataFrame({'x': [], 'y': []})
 df5a = pd.DataFrame({'x': [], 'y': []})
 df6a = pd.DataFrame({'x': [], 'y': []})
 df7a = pd.DataFrame({'x': [], 'y': []})
-a1 = 1
-b = 1
-c = 1
-d = 1
-f = 1
-e1 = 1
-g = 1
+a1 = number
+b = number
+c = number
+d = number
+f = number
+e1 = number
+g = number
 
-trial10 = Greedystrategies(10)
+trial10 = greedyStrategies(10)
 df1a = trial10.decreasingEpsilon(a1, df1a)
-df2a = trial10.EpsilonGreedy(b, df2a)
+df2a = trial10.epsilonGreedy(b, df2a)
 df3a = trial10.hybrid1(c, df3a)
 df4a = trial10.hybrid2(d, df4a)
 df5a = trial10.hybrid3(e1, df5a)

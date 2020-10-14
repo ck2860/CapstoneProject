@@ -34,3 +34,4 @@ class agent():
         self.loss = -(tf.log(self.responsible_weight)*self.reward_holder)
         optimizer = tf.train.AdamOptimizer(learning_rate=lr)
         self.update = optimizer.minimize(self.loss)
+

@@ -1,4 +1,5 @@
 import warnings
+
 warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 import matplotlib.pyplot as plt
@@ -6,6 +7,7 @@ import numpy as np
 import pandas as pd
 import sys
 import tensorflow.compat.v1 as tf
+
 tf.logging.set_verbosity(tf.logging.ERROR)
 from ContextualBandit import *
 from ContextualBanditAgent import *
@@ -13,7 +15,7 @@ from GreedyStrategies import *
 from Plot import *
 
 ## @package ONEtrial
-## Documentation for 1trial.py
+## Documentation for OneTrial.py
 # 1 trial of evaluations is performed with your chosen random seed. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.
 # GreedyStrategies and Plot classes are used here. Please go to see Class tab for more details.
 
@@ -24,18 +26,30 @@ df4a = pd.DataFrame({'x': [], 'y': []})
 df5a = pd.DataFrame({'x': [], 'y': []})
 df6a = pd.DataFrame({'x': [], 'y': []})
 df7a = pd.DataFrame({'x': [], 'y': []})
-number = int(sys.argv[1])
-a1 = number
-b = number
-c = number
-d = number
-f = number
-e1 = number
-g = number
 
-trial1 = Greedystrategies(1)
+number1 = sys.argv[1]
+
+def get_integer(number1):
+    try:
+        number = int(number1)
+    except ValueError:
+        print("A ValueError exception occurred: you entered a non-integer value.")
+        sys.exit(1)
+    else:
+        return number
+
+
+a1 = get_integer(number1)
+b = get_integer(number1)
+c = get_integer(number1)
+d = get_integer(number1)
+f = get_integer(number1)
+e1 = get_integer(number1)
+g = get_integer(number1)
+
+trial1 = greedyStrategies(1)
 df1a = trial1.decreasingEpsilon(a1, df1a)
-df2a = trial1.EpsilonGreedy(b, df2a)
+df2a = trial1.epsilonGreedy(b, df2a)
 df3a = trial1.hybrid1(c, df3a)
 df4a = trial1.hybrid2(d, df4a)
 df5a = trial1.hybrid3(e1, df5a)
@@ -66,6 +80,5 @@ df7Ameans = df7aa.mean(0)
 eval1 = plot()
 eval1.graph(df1a=df1a, df1Ameans=df1Ameans, df2Ameans=df2Ameans, df3Ameans=df3Ameans, df4Ameans=df4Ameans,
             df5Ameans=df5Ameans, df6Ameans=df6Ameans, df7Ameans=df7Ameans)
-
 
 print("The python script is %s" % (sys.argv[0]), "and the random seed is %s" % (sys.argv[1]))

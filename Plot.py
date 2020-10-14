@@ -1,11 +1,12 @@
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import sys
 import warnings
 warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import sys
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
 import tensorflow.compat.v1 as tf
 tf.logging.set_verbosity(tf.logging.ERROR)
 
@@ -25,10 +26,10 @@ class plot():
     ##@param df6Ameans: Hybrid#4 means rewards
     ##@param df7Ameans: Hybrid#5 means rewards
 
-    def graph(self, df1a, df1Ameans, df2Ameans, df3Ameans, df4Ameans, df5Ameans, df6Ameans, df7Ameans):
-        df = pd.DataFrame({'x': df1a['x'], 'Epsilon-Decreasing': df1Ameans, 'Epsilon-Greedy': df2Ameans,
-                          'Hybrid #1': df3Ameans, 'Hybrid #2': df4Ameans, 'Hybrid#3': df5Ameans,
-                           'Hybrid#4': df6Ameans, 'Hybrid#5': df7Ameans})
+    def Eval_graph(self, df1a, df1_Ameans, df2_Ameans, df3_Ameans, df4_Ameans, df5_Ameans, df6_Ameans, df7_Ameans):
+        df = pd.DataFrame({'x': df1a['x'], 'Epsilon-Decreasing': df1_Ameans, 'Epsilon-Greedy': df2_Ameans,
+                          'Hybrid #1': df3_Ameans, 'Hybrid #2': df4_Ameans, 'Hybrid#3': df5_Ameans,
+                           'Hybrid#4': df6_Ameans, 'Hybrid#5': df7_Ameans})
 
         plt.style.use('seaborn-darkgrid')
 
@@ -65,4 +66,9 @@ class plot():
             plt.title(column, loc='left', fontsize=12, fontweight=0, color=palette(num))
             # general title
             plt.suptitle("In comparison of mean rewards", fontsize=13, fontweight=0, color='black', style='italic', y=1.02)
+        return plt.show()
+
+    def tukey(self, tukey_plot):
+        # perform plot_simultaneous function from the statsmodel package
+        tukey_plot.plot_simultaneous()
         return plt.show()

@@ -36,7 +36,6 @@ def BanditTensor(cBandit, e, sess, myAgent, weights):
     else:
         action = sess.run(myAgent.chosen_action, feed_dict={myAgent.state_in: [s]})  # exploit
     reward = cBandit.pullArm(action)  # Get our reward for taking an action given a bandit.
-
     # Update the network.
     feed_dict = {myAgent.reward_holder: [reward], myAgent.action_holder: [action],
                  myAgent.state_in: [s]}
