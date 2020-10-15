@@ -27,25 +27,28 @@ df5a = pd.DataFrame({'x': [], 'y': []})
 df6a = pd.DataFrame({'x': [], 'y': []})
 df7a = pd.DataFrame({'x': [], 'y': []})
 
-number1 = sys.argv[1]
-
-def get_integer(number1):
-    try:
-        number = int(number1)
-    except ValueError:
-        print("A ValueError exception occurred: you entered a non-integer value.")
-        sys.exit(1)
-    else:
-        return number
+number1 = "" + sys.argv[1]
 
 
-a1 = get_integer(number1)
-b = get_integer(number1)
-c = get_integer(number1)
-d = get_integer(number1)
-f = get_integer(number1)
-e1 = get_integer(number1)
-g = get_integer(number1)
+class RandomSeedNumber():
+    def get_integer(self, num):
+        try:
+            number = int(num)
+        except ValueError:
+            print("A ValueError exception occurred: you entered a non-integer value.")
+            sys.exit(1)
+        else:
+            return number
+
+
+seed = RandomSeedNumber()
+a1 = seed.get_integer(number1)
+b = seed.get_integer(number1)
+c = seed.get_integer(number1)
+d = seed.get_integer(number1)
+f = seed.get_integer(number1)
+e1 = seed.get_integer(number1)
+g = seed.get_integer(number1)
 
 trial1 = greedyStrategies(1)
 df1a = trial1.decreasingEpsilon(a1, df1a)
@@ -78,7 +81,7 @@ df7aa = pd.DataFrame(df7a['y'].values.reshape(1, 20))
 df7Ameans = df7aa.mean(0)
 
 eval1 = plot()
-eval1.graph(df1a=df1a, df1Ameans=df1Ameans, df2Ameans=df2Ameans, df3Ameans=df3Ameans, df4Ameans=df4Ameans,
+eval1.Eval_graph(df1a=df1a, df1Ameans=df1Ameans, df2Ameans=df2Ameans, df3Ameans=df3Ameans, df4Ameans=df4Ameans,
             df5Ameans=df5Ameans, df6Ameans=df6Ameans, df7Ameans=df7Ameans)
 
 print("The python script is %s" % (sys.argv[0]), "and the random seed is %s" % (sys.argv[1]))

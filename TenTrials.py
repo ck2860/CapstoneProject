@@ -66,7 +66,7 @@ df7aa = pd.DataFrame(df7a['y'].values.reshape(10, 20))
 df7Ameans = df7aa.mean(0)
 
 eval2 = plot()
-eval2.graph(df1a=df1a, df1Ameans=df1Ameans, df2Ameans=df2Ameans, df3Ameans=df3Ameans, df4Ameans=df4Ameans, df5Ameans=df5Ameans, df6Ameans=df6Ameans, df7Ameans=df7Ameans)
+eval2.Eval_graph(df1a=df1a, df1Ameans=df1Ameans, df2Ameans=df2Ameans, df3Ameans=df3Ameans, df4Ameans=df4Ameans, df5Ameans=df5Ameans, df6Ameans=df6Ameans, df7Ameans=df7Ameans)
 
 print("The Python script is %s" % (sys.argv[0]))
 print("10 trials of greedy-based strategies were performed.")
