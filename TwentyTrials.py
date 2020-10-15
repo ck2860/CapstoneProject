@@ -1,4 +1,5 @@
 import warnings
+
 warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 
@@ -7,6 +8,7 @@ import numpy as np
 import pandas as pd
 import sys
 import tensorflow.compat.v1 as tf
+
 tf.logging.set_verbosity(tf.logging.ERROR)
 from ContextualBandit import *
 from ContextualBanditAgent import *
@@ -17,23 +19,17 @@ from Plot import *
 ## Documentation for TwentyTrials.py
 # 20 trials of evaluation are performed with 20 different random seeds. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.
 # GreedyStrategies and Plot classes are used here. Please go to see Class tab for more details.
-df1a = pd.DataFrame({'x': [], 'y': []})
-df2a = pd.DataFrame({'x': [], 'y': []})
-df3a = pd.DataFrame({'x': [], 'y': []})
-df4a = pd.DataFrame({'x': [], 'y': []})
-df5a = pd.DataFrame({'x': [], 'y': []})
-df6a = pd.DataFrame({'x': [], 'y': []})
-df7a = pd.DataFrame({'x': [], 'y': []})
+df = pd.DataFrame({'x': [], 'y': []})
 seed = 1
 
 trial20 = greedyStrategies(20)
-df1a = trial20.decreasingEpsilon(seed, df1a)
-df2a = trial20.epsilonGreedy(seed, df2a)
-df3a = trial20.hybrid1(seed, df3a)
-df4a = trial20.hybrid2(seed, df4a)
-df5a = trial20.hybrid3(seed, df5a)
-df6a = trial20.hybrid4(seed, df6a)
-df7a = trial20.hybrid5(seed, df7a)
+df1a = trial20.decreasingEpsilon(seed, df)
+df2a = trial20.epsilonGreedy(seed, df)
+df3a = trial20.hybrid1(seed, df)
+df4a = trial20.hybrid2(seed, df)
+df5a = trial20.hybrid3(seed, df)
+df6a = trial20.hybrid4(seed, df)
+df7a = trial20.hybrid5(seed, df)
 
 df1aa = pd.DataFrame(df1a['y'].values.reshape(20, 20))
 df1Ameans = df1aa.mean(0)
@@ -58,7 +54,7 @@ df7Ameans = df7aa.mean(0)
 
 eval2 = plot()
 eval2.Eval_graph(df1a=df1a, df1Ameans=df1Ameans, df2Ameans=df2Ameans, df3Ameans=df3Ameans, df4Ameans=df4Ameans,
-            df5Ameans=df5Ameans, df6Ameans=df6Ameans, df7Ameans=df7Ameans)
+                 df5Ameans=df5Ameans, df6Ameans=df6Ameans, df7Ameans=df7Ameans)
 
 print("The Python script is %s" % (sys.argv[0]))
 print("20 trials of greedy-based strategies were performed.")

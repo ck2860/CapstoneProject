@@ -20,12 +20,6 @@ from Plot import *
 # GreedyStrategies and Plot classes are used here. Please go to see Class tab for more details.
 
 df = pd.DataFrame({'x': [], 'y': []})
-# df2a = pd.DataFrame({'x': [], 'y': []})
-# df3a = pd.DataFrame({'x': [], 'y': []})
-# df4a = pd.DataFrame({'x': [], 'y': []})
-# df5a = pd.DataFrame({'x': [], 'y': []})
-# df6a = pd.DataFrame({'x': [], 'y': []})
-# df7a = pd.DataFrame({'x': [], 'y': []})
 
 if len(sys.argv) < 2:
     print("You failed to provide a random seed number as input on the command line.")
