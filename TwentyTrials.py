@@ -17,7 +17,6 @@ from Plot import *
 ## Documentation for TwentyTrials.py
 # 20 trials of evaluation are performed with 20 different random seeds. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.
 # GreedyStrategies and Plot classes are used here. Please go to see Class tab for more details.
-number = 1
 df1a = pd.DataFrame({'x': [], 'y': []})
 df2a = pd.DataFrame({'x': [], 'y': []})
 df3a = pd.DataFrame({'x': [], 'y': []})
@@ -25,22 +24,16 @@ df4a = pd.DataFrame({'x': [], 'y': []})
 df5a = pd.DataFrame({'x': [], 'y': []})
 df6a = pd.DataFrame({'x': [], 'y': []})
 df7a = pd.DataFrame({'x': [], 'y': []})
-a1 = number
-b = number
-c = number
-d = number
-f = number
-e1 = number
-g = number
+seed = 1
 
 trial20 = greedyStrategies(20)
-df1a = trial20.decreasingEpsilon(a1, df1a)
-df2a = trial20.epsilonGreedy(b, df2a)
-df3a = trial20.hybrid1(c, df3a)
-df4a = trial20.hybrid2(d, df4a)
-df5a = trial20.hybrid3(e1, df5a)
-df6a = trial20.hybrid4(f, df6a)
-df7a = trial20.hybrid5(g, df7a)
+df1a = trial20.decreasingEpsilon(seed, df1a)
+df2a = trial20.epsilonGreedy(seed, df2a)
+df3a = trial20.hybrid1(seed, df3a)
+df4a = trial20.hybrid2(seed, df4a)
+df5a = trial20.hybrid3(seed, df5a)
+df6a = trial20.hybrid4(seed, df6a)
+df7a = trial20.hybrid5(seed, df7a)
 
 df1aa = pd.DataFrame(df1a['y'].values.reshape(20, 20))
 df1Ameans = df1aa.mean(0)
