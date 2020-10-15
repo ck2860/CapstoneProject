@@ -27,28 +27,29 @@ df5a = pd.DataFrame({'x': [], 'y': []})
 df6a = pd.DataFrame({'x': [], 'y': []})
 df7a = pd.DataFrame({'x': [], 'y': []})
 
-number1 = "" + sys.argv[1]
+if len(sys.argv) < 2:
+    print("You failed to provide a random seed number as input on the command line.")
+    sys.exit(1)
+
+number1 = sys.argv[1]
 
 
-class RandomSeedNumber():
-    def get_integer(self, num):
-        try:
-            number = int(num)
-        except ValueError:
-            print("A ValueError exception occurred: you entered a non-integer value.")
-            sys.exit(1)
-        else:
-            return number
+def get_integer(self, num):
+    try:
+        number = int(num)
+    except ValueError:
+        print("A ValueError exception occurred: you entered a non-integer value.")
+        sys.exit(1)
+    else:
+        return number
 
-
-seed = RandomSeedNumber()
-a1 = seed.get_integer(number1)
-b = seed.get_integer(number1)
-c = seed.get_integer(number1)
-d = seed.get_integer(number1)
-f = seed.get_integer(number1)
-e1 = seed.get_integer(number1)
-g = seed.get_integer(number1)
+a1 = get_integer(number1)
+b = get_integer(number1)
+c = get_integer(number1)
+d = get_integer(number1)
+f = get_integer(number1)
+e1 = get_integer(number1)
+g = get_integer(number1)
 
 trial1 = greedyStrategies(1)
 df1a = trial1.decreasingEpsilon(a1, df1a)
