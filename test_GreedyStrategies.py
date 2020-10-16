@@ -1,5 +1,6 @@
 from unittest import TestCase
 import warnings
+
 warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 import tensorflow.compat.v1 as tf
@@ -7,6 +8,7 @@ from ContextualBandit import *
 from ContextualBanditAgent import *
 # tf.logging.set_verbosity(tf.logging.ERROR)
 from GreedyStrategies import *
+
 
 class TestGreedystrategies(TestCase):
     def test_decreasing_epsilon(self):
@@ -26,7 +28,6 @@ class TestGreedystrategies(TestCase):
         df1aa = pd.DataFrame(df1a['y'].values.reshape(1, 20))
         df1Ameans = df1aa.mean(0)
         self.assertEqual(df1Ameans[8], 93.2)
-
 
     def test_hybrid1(self):
         trial1 = greedyStrategies(1)
