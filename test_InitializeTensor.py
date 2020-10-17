@@ -1,5 +1,4 @@
 from unittest import TestCase
-
 from InitializeTensor import *
 import ContextualBanditAgent
 import ContextualBandit

@@ -1,5 +1,4 @@
 import warnings
-
 warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 import matplotlib.pyplot as plt
@@ -9,9 +8,6 @@ import sys
 import tensorflow.compat.v1 as tf
 from ContextualBandit import *
 from ContextualBanditAgent import *
-
-# warnings.filterwarnings('ignore', category=FutureWarning)
-# warnings.filterwarnings('ignore', category=DeprecationWarning)
 tf.logging.set_verbosity(tf.logging.ERROR)
 from InitializeTensor import *
 

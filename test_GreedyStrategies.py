@@ -1,6 +1,5 @@
 from unittest import TestCase
 import warnings
-
 warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 import tensorflow.compat.v1 as tf

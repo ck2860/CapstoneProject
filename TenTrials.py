@@ -1,7 +1,6 @@
 import warnings
 warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
-
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
