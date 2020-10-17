@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import sys
 
 #the lower the value, the greater the change of a positive reward.
 def importingData():
@@ -9,3 +10,12 @@ def importingData():
     data = np.array([newArr[0], newArr[1]])
     data = np.negative([newArr[0], newArr[1]])  # converting them into negative number
     return data
+
+def get_integer(num):
+    try:
+        number = int(num)
+    except:
+        print("An exception occurred: you entered a non-integer value.")
+        sys.exit(1)
+    else:
+        return number

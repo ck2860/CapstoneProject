@@ -1,9 +1,15 @@
 import pandas as pd
 import scipy.stats as stats
+from Plot import *
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+import warnings
+warnings.filterwarnings("ignore")
 
 ## @package StatsTest
 ## Documentation for StatsTest.py
 # we would be using t-tests and ANOVA for analysis. Script.stat package is used; ttest_ind and f_oneway functions are performed.
+# we use a Tukey post hoc analysis to confirm where the differences occurred between greedy-based strategies: Epsilon-Greedy, Epsilon-Decreasing, Hybrid#2, and Hybrid#4.
+
 # Null Hypothesis (H0): There is no significant difference between the strategies.
 # Alternative Hypothesis (H1): There are significant differences between the strategies.
 # We use 0.05 for the significant level.
@@ -25,3 +31,9 @@ print("ANOVA of Epsilon-Greedy, Epsilon-Decreasing, and Hybrid#2: the p-value is
 print("ANOVA of Epsilon-Greedy, Epsilon-Decreasing, and Hybrid#3: the p-value is ", ANOVA3[1], "and we fail to reject the null hypothesis.")
 print("ANOVA of Epsilon-Greedy, Epsilon-Decreasing, and Hybrid#4: the p-value is ", ANOVA4[1], "and we would like to reject the null hypothesis in favor of the alternative hypothesis.")
 print("ANOVA of Epsilon-Greedy, Epsilon-Decreasing, and Hybrid#5: the p-value is ", ANOVA5[1], "and we fail to reject the null hypothesis.")
+
+# Statsmodels.stats.multicomp package is used; only pairwise_tukeyhsd function is performed.
+df1 = pd.read_csv('data/TukeyData.csv')  # importing a data set
+tukey_plot = pairwise_tukeyhsd(endog=df1['MeanRewards'], groups=df1['Strategy'], alpha=0.05)  # performing Tukey post hoc test
+tukeyHSD = plot()  # assigned the created Plot instance to the variable tukeyHSD.
+tukeyHSD.tukey(tukey_plot)  # calling the tukey plot function
