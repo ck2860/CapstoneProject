@@ -24,7 +24,7 @@ ANOVA3 = stats.f_oneway(df['EGreedy'], df['EDecreasing'], df['Hybrid3'])  # ANOV
 ANOVA4 = stats.f_oneway(df['EGreedy'], df['EDecreasing'], df['Hybrid4'])  # ANOVA on epsilon-greedy, epsilon-decreasing, Hybrid#4
 ANOVA5 = stats.f_oneway(df['EGreedy'], df['EDecreasing'], df['Hybrid5'])  # ANOVA on epsilon-greedy, epsilon-decreasing, Hybrid#5
 
-# Printing our results
+# Printing the results
 print("T-Test of Epsilon-Greedy and Epsilon-Decreasing: the p-value is ", t_test[1], "and we fail to reject the null hypothesis.")
 print("ANOVA of Epsilon-Greedy, Epsilon-Decreasing, and Hybrid#1: the p-value is ", ANOVA1[1], "and we fail to reject the null hypothesis.")
 print("ANOVA of Epsilon-Greedy, Epsilon-Decreasing, and Hybrid#2: the p-value is ", ANOVA2[1], "and we would like to reject the null hypothesis in favor of the alternative hypothesis.")
@@ -34,6 +34,5 @@ print("ANOVA of Epsilon-Greedy, Epsilon-Decreasing, and Hybrid#5: the p-value is
 
 # Statsmodels.stats.multicomp package is used; only pairwise_tukeyhsd function is performed.
 df1 = pd.read_csv('data/TukeyData.csv')  # importing a data set
-tukey_plot = pairwise_tukeyhsd(endog=df1['MeanRewards'], groups=df1['Strategy'], alpha=0.05)  # performing Tukey post hoc test
-tukeyHSD = plot()  # assigned the created Plot instance to the variable tukeyHSD.
-tukeyHSD.tukey(tukey_plot)  # calling the tukey plot function
+tukey_result = pairwise_tukeyhsd(endog=df1['MeanRewards'], groups=df1['Strategy'], alpha=0.05)  # performing Tukey post hoc test
+tukey_plot(tukey_result)  # calling the tukey_plot function

@@ -2,7 +2,8 @@ import numpy as np
 import pandas as pd
 import sys
 
-#the lower the value, the greater the change of a positive reward.
+
+# the lower the value, the greater the change of a positive reward.
 def importingData():
     adsDF = pd.read_csv('data/Ads_Optimisation.csv')  # importing the data
     meansDF = adsDF.mean()  # averaging the click for each ad.
@@ -10,6 +11,7 @@ def importingData():
     data = np.array([newArr[0], newArr[1]])
     data = np.negative([newArr[0], newArr[1]])  # converting them into negative number
     return data
+
 
 def get_integer(num):
     try:

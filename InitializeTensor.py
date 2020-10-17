@@ -25,11 +25,12 @@ def initializeTensor():
     init = tf.global_variables_initializer()  # initializes global variables.
     return cBandit, myAgent, weights, total_episodes, total_reward, init
 
+
 ## Documentation for BanditTensor function
 # We start with getting a state and decide to explore or exploit based on greedy strategies.
 # Once we get the reward, using Contextual Bandit's pullArm function.
 # Returns state, action, and reward
-def BanditTensor(cBandit, e, sess, myAgent, weights):
+def BanditTensor(cBandit, e, sess, myAgent, weights, total_reward, i, df):
     s = cBandit.getBandit()  # Get a state from the environment.
     r = np.random.rand(1)  # Sampling from normal distribution
     if r < e:  # Choose either a random action or one from our network.
@@ -41,5 +42,9 @@ def BanditTensor(cBandit, e, sess, myAgent, weights):
     feed_dict = {myAgent.reward_holder: [reward], myAgent.action_holder: [action],
                  myAgent.state_in: [s]}  # feed-forwarding
     _, ww = sess.run([myAgent.update, weights], feed_dict=feed_dict)  # update
-    return s, action, reward
-
+    # Update our running tally of scores.
+    total_reward[s, action] += reward
+    if i % 500 == 0:
+        meanR = np.mean(total_reward, axis=1)
+        df = df.append({'x': i, 'y': meanR[0]}, ignore_index=True)
+    return df

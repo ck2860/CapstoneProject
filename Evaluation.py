@@ -60,10 +60,8 @@ df6Ameans = df6aa.mean(0)
 df7aa = pd.DataFrame(df7a['y'].values.reshape(intNum, 20))
 df7Ameans = df7aa.mean(0)
 
-eval1 = plot()
-eval1.Eval_graph(df1a=df1a, df1Ameans=df1Ameans, df2Ameans=df2Ameans, df3Ameans=df3Ameans, df4Ameans=df4Ameans,
-                 df5Ameans=df5Ameans, df6Ameans=df6Ameans, df7Ameans=df7Ameans)
+Eval_graph(df1a=df1a, df1Ameans=df1Ameans, df2Ameans=df2Ameans, df3Ameans=df3Ameans, df4Ameans=df4Ameans, df5Ameans=df5Ameans, df6Ameans=df6Ameans, df7Ameans=df7Ameans)
 
-print("The python script is %s" % (sys.argv[0]), "and %s trial(s) of epsilon-based strategies was/were performed." % (sys.argv[1]))
+print("The python script is %s" % (sys.argv[0]), "and  %s trial(s) of epsilon-based strategies is/are done." % (sys.argv[1]))
 
 

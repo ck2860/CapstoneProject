@@ -1,4 +1,5 @@
 import warnings
+
 warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
 import matplotlib.pyplot as plt
@@ -9,6 +10,7 @@ from addData import *
 import tensorflow.compat.v1 as tf
 tf.logging.set_verbosity(tf.logging.ERROR)
 
+
 ## Documentation for Contextual Bandit class
 # this class initializes with a state, bandits, number of bandits, and number of actions.
 # It has two functions: getBandit(): and pullArm(action):
@@ -18,7 +20,7 @@ class contextual_bandit():
     # setting up a contextual bandit
     def __init__(self):
         self.state = 0  # The number of current bandit
-        data = importingData() # importing data (ad selections)
+        data = importingData()  # importing data (ad selections)
         self.bandits = np.array(data)  # the data is being used as bandits/arms.
         self.num_bandits = self.bandits.shape[0]  # the bandit number
         self.num_actions = self.bandits.shape[1]  # the action number

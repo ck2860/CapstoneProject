@@ -8,7 +8,6 @@ import sys
 import tensorflow.compat.v1 as tf
 from ContextualBandit import *
 from ContextualBanditAgent import *
-
 tf.logging.set_verbosity(tf.logging.ERROR)
 from InitializeTensor import *
 
@@ -37,13 +36,7 @@ class greedyStrategies():
                 i = 0
                 np.random.seed(a1)
                 while i < total_episodes:
-                    s, action, reward = BanditTensor(cBandit, e, sess, myAgent, weights)
-                    # Update our running tally of scores.
-                    total_reward[s, action] += reward
-                    if i % 500 == 0:
-                        meanR = np.mean(total_reward, axis=1)
-                        df1a = df1a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
-                        # print("Epsilon-Decreasing mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
+                    df1a = BanditTensor(cBandit, e, sess, myAgent, weights, total_reward, i, df1a)
                     e -= value  # in the end it would be highly exploitative
                     i += 1
                 a1 += 1
@@ -64,13 +57,7 @@ class greedyStrategies():
                 i = 0
                 np.random.seed(b)
                 while i < total_episodes:
-                    s, action, reward = BanditTensor(cBandit, e, sess, myAgent, weights)
-                    # Update our running tally of scores.
-                    total_reward[s, action] += reward
-                    if i % 500 == 0:
-                        meanR = np.mean(total_reward, axis=1)
-                        df2a = df2a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
-                        # print("Epsilon-Greedy mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
+                    df2a = BanditTensor(cBandit, e, sess, myAgent, weights, total_reward, i, df2a)
                     i += 1
                 b += 1
                 print("Trial#", a + 1, ": Epsilon-Greedy is done!")
@@ -91,13 +78,7 @@ class greedyStrategies():
                 i = 0
                 np.random.seed(c)
                 while i < total_episodes:
-                    s, action, reward = BanditTensor(cBandit, e, sess, myAgent, weights)
-                    # Update our running tally of scores.
-                    total_reward[s, action] += reward
-                    if i % 500 == 0:
-                        meanR = np.mean(total_reward, axis=1)
-                        df3a = df3a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
-                        # print("Hybrid#1 mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
+                    df3a = BanditTensor(cBandit, e, sess, myAgent, weights, total_reward, i, df3a)
                     e -= value  # in the end it would be highly exploitative (10% explore, 90% exploit)
                     i += 1
                 c += 1
@@ -119,15 +100,9 @@ class greedyStrategies():
                 i = 0
                 np.random.seed(d)
                 while i < total_episodes:
-                    s, action, reward = BanditTensor(cBandit, e, sess, myAgent, weights)
-                    # Update our running tally of scores.
-                    total_reward[s, action] += reward
-                    if i % 500 == 0:
-                        meanR = np.mean(total_reward, axis=1)
-                        df4a = df4a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
-                        # print("Hybrid#2 mean rewards: " + str(meanR[0]) + " at the episode of "+ str(i))
+                    df4a = BanditTensor(cBandit, e, sess, myAgent, weights, total_reward, i, df4a)
                     e -= value  # in the end it would be highly exploitative (10% explore, 90% exploit)
-                    if e < 0.1:
+                    if e < 0.1:  # once it hits at 10% of exploration, it keeps 10% throughout the course.
                         e = 0.1
                     i += 1
                 d += 1
@@ -149,15 +124,9 @@ class greedyStrategies():
                 i = 0
                 np.random.seed(e1)
                 while i < total_episodes:
-                    s, action, reward = BanditTensor(cBandit, e, sess, myAgent, weights)
-                    # Update our running tally of scores.
-                    total_reward[s, action] += reward
-                    if i % 500 == 0:
-                        meanR = np.mean(total_reward, axis=1)
-                        df5a = df5a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
-                        # print("Hybrid#3 mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
+                    df5a = BanditTensor(cBandit, e, sess, myAgent, weights, total_reward, i, df5a)
                     e -= value  # in the end it would be highly exploitative (10% explore, 90% exploit)
-                    if e < 0.1:
+                    if e < 0.1:  # once it hits at 10% of exploration, it keeps 10% throughout the course.
                         e = 0.1
                     i += 1
                 e1 += 1
@@ -179,15 +148,9 @@ class greedyStrategies():
                 i = 0
                 np.random.seed(f)
                 while i < total_episodes:
-                    s, action, reward = BanditTensor(cBandit, e, sess, myAgent, weights)
-                    # Update our running tally of scores.
-                    total_reward[s, action] += reward
-                    if i % 500 == 0:
-                        meanR = np.mean(total_reward, axis=1)
-                        df6a = df6a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
-                        # print("Hybrid#4 mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
+                    df6a = BanditTensor(cBandit, e, sess, myAgent, weights, total_reward, i, df6a)
                     e -= value  # in the end it would be highly exploitative (10% explore, 90% exploit)
-                    if e < 0.1:
+                    if e < 0.1:  # once it hits at 10% of exploration, it keeps 10% throughout the course.
                         e = 0.1
                     i += 1
                 f += 1
@@ -209,15 +172,9 @@ class greedyStrategies():
                 i = 0
                 np.random.seed(g)
                 while i < total_episodes:
-                    s, action, reward = BanditTensor(cBandit, e, sess, myAgent, weights)
-                    # Update our running tally of scores.
-                    total_reward[s, action] += reward
-                    if i % 500 == 0:
-                        meanR = np.mean(total_reward, axis=1)
-                        df7a = df7a.append({'x': i, 'y': meanR[0]}, ignore_index=True)
-                        # print("Hybrid#5 mean rewards: " + str(meanR[0]) + " at the episode of " + str(i))
+                    df7a = BanditTensor(cBandit, e, sess, myAgent, weights, total_reward, i, df7a)
                     e -= value  # in the end it would be highly exploitative (10% explore, 90% exploit)
-                    if e < 0.1:
+                    if e < 0.1:  # once it hits at 10% of exploration, it keeps 10% throughout the course.
                         e = 0.1
                     i += 1
                 g += 1
