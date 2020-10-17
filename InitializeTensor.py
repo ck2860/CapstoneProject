@@ -29,7 +29,7 @@ def initializeTensor():
 ## Documentation for BanditTensor function
 # We start with getting a state and decide to explore or exploit based on greedy strategies.
 # Once we get the reward, using Contextual Bandit's pullArm function.
-# Returns state, action, and reward
+# Returns result in dataframe
 def BanditTensor(cBandit, e, sess, myAgent, weights, total_reward, i, df):
     s = cBandit.getBandit()  # Get a state from the environment.
     r = np.random.rand(1)  # Sampling from normal distribution
