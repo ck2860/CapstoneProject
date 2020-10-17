@@ -17,6 +17,7 @@ def importingData():
 
 ## Documentation for get_integer function
 # The function would handle the exceptions if the value is not an integer.
+def get_integer(num):
     try:
         number = int(num)
     except:
