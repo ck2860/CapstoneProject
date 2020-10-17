@@ -8,13 +8,13 @@ import sys
 import tensorflow.compat.v1 as tf
 from ContextualBandit import *
 from ContextualBanditAgent import *
-
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 
-## Documentation for Agent class
-# This class sets up a contextual bandit agent via building a feed-forward in the network and training/updating the network. It would either return positive or negative reward.  Positive reinforcement is a reward for picking the most optimal arm; negative reinforcement is a penalty for not picking the best arm.
-
+## Documentation for initializeTensor function
+# The network would be initialized using Tensorflow.
+# This function sets up with learning rate of 0.05 and 10,000 episodes, along with number of bandits and actions.
+# returns contextual_bandit, agent, weights, total_episode, total_reward, and init
 def initializeTensor():
     tf.reset_default_graph()
     cBandit = contextual_bandit()
@@ -22,21 +22,24 @@ def initializeTensor():
     weights = tf.trainable_variables()[0]  # The weights we will evaluate to look into the network.
     total_episodes = 10000  # Set total number of episodes to train agent on.
     total_reward = np.zeros([cBandit.num_bandits, cBandit.num_actions])  # Set scoreboard for bandits to 0.
-    init = tf.global_variables_initializer()
+    init = tf.global_variables_initializer()  # initializes global variables.
     return cBandit, myAgent, weights, total_episodes, total_reward, init
 
-
+## Documentation for BanditTensor function
+# We start with getting a state and decide to explore or exploit based on greedy strategies.
+# Once we get the reward, using Contextual Bandit's pullArm function.
+# Returns state, action, and reward
 def BanditTensor(cBandit, e, sess, myAgent, weights):
     s = cBandit.getBandit()  # Get a state from the environment.
-    # Choose either a random action or one from our network.
-    r = np.random.rand(1)
-    if r < e:
+    r = np.random.rand(1)  # Sampling from normal distribution
+    if r < e:  # Choose either a random action or one from our network.
         action = np.random.randint(cBandit.num_actions)  # explore
     else:
         action = sess.run(myAgent.chosen_action, feed_dict={myAgent.state_in: [s]})  # exploit
     reward = cBandit.pullArm(action)  # Get our reward for taking an action given a bandit.
     # Update the network.
     feed_dict = {myAgent.reward_holder: [reward], myAgent.action_holder: [action],
-                 myAgent.state_in: [s]}
-    _, ww = sess.run([myAgent.update, weights], feed_dict=feed_dict)
+                 myAgent.state_in: [s]}  # feed-forwarding
+    _, ww = sess.run([myAgent.update, weights], feed_dict=feed_dict)  # update
     return s, action, reward
+

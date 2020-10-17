@@ -8,6 +8,12 @@ from ContextualBanditAgent import *
 # tf.logging.set_verbosity(tf.logging.ERROR)
 from GreedyStrategies import *
 
+## @package TestGreedystrategies
+## Documentation for test_GreedyStrategies.py
+# We test decreasing-epsilon, greedy-epsilon, hybrid#1, hybrid#2, hybrid#3, hybrid#4, and hybrid#5 functions from GreedyStrategies.py with expected results.
+# These tests help us to ensure that our network is working and consistent.
+# Since all functions from ImportData.py, ContextualBandit.py, ContexutualBanditAgent.py, InitializeTensor.py are utilized in the Greedy-based strategies, we test all functions at once!
+# We will have seven tests with different random seed each and match with expected results.
 
 class TestGreedystrategies(TestCase):
     def test_decreasing_epsilon(self):

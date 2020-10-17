@@ -12,7 +12,7 @@ from ContextualBanditAgent import *
 from GreedyStrategies import *
 from Plot import *
 
-## @package ONEtrial
+## @package OneTrial
 ## Documentation for OneTrial.py
 # 1 trial of evaluations is performed with your chosen random seed. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.
 # GreedyStrategies and Plot classes are used here. Please go to see Class tab for more details.

@@ -1,7 +1,6 @@
 import warnings
 warnings.filterwarnings('ignore', category=FutureWarning)
 warnings.filterwarnings('ignore', category=DeprecationWarning)
-
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -11,7 +10,7 @@ import tensorflow.compat.v1 as tf
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 ## Documentation for plot class
-# this class has a graph function that you will be using for evaluations.
+# this class has two functions: a graph function that is for evaluations and a tukey plot that was used for twentyTrials
 
 
 class plot():
@@ -45,7 +44,7 @@ class plot():
             for v in df.drop('x', axis=1):
                 plt.plot(df['x'], df[v], marker='', color='black', linewidth=0.5, alpha=0.5)
 
-            # Plot
+            # Plotting
             plt.plot(df['x'], df[column], marker='', color=palette(num), linewidth=2.4, alpha=0.9, label=column)
             plt.xlim(0, 10000)
             plt.ylim(-8, 200)
@@ -62,12 +61,13 @@ class plot():
             if num in [5, 6, 7]:
                 plt.xlabel("Episode", fontsize=10)
 
-            # Add title
+            # Adding title
             plt.title(column, loc='left', fontsize=12, fontweight=0, color=palette(num))
-            # general title
             plt.suptitle("In comparison of mean rewards", fontsize=13, fontweight=0, color='black', style='italic', y=1.02)
         return plt.show()
 
+    ## Documentation for tukey function
+    # Plot the Tukey post hoc test
     def tukey(self, tukey_plot):
         # perform plot_simultaneous function from the statsmodel package
         tukey_plot.plot_simultaneous()
