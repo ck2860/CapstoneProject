@@ -8,6 +8,7 @@ import sys
 import tensorflow.compat.v1 as tf
 from ContextualBandit import *
 from ContextualBanditAgent import *
+
 tf.logging.set_verbosity(tf.logging.ERROR)
 from InitializeTensor import *
 

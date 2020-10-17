@@ -19,8 +19,9 @@ from Plot import *
 
 df = pd.DataFrame({'x': [], 'y': []})
 seed = 1
+numberOfTrials = 10
 
-trial10 = greedyStrategies(10)
+trial10 = greedyStrategies(numberOfTrials)
 df1a = trial10.decreasingEpsilon(seed, df)
 df2a = trial10.epsilonGreedy(seed, df)
 df3a = trial10.hybrid1(seed, df)

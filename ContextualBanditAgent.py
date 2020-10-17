@@ -19,7 +19,6 @@ class agent():
         self.state_in = tf.placeholder(tf.int32, shape=(1,))
 
         #These lines established the feed-forward part of the network. The agent takes a state and produces an action.
-        # layer
         state_in_OH = tf.one_hot(self.state_in, s_size)
         output = tf.layers.dense(state_in_OH, a_size, tf.nn.sigmoid, use_bias=False, kernel_initializer=tf.ones_initializer())
         self.output = tf.reshape(output, [-1])
@@ -29,7 +28,6 @@ class agent():
         #to compute the loss, and use it to update the network.
         self.reward_holder = tf.placeholder(tf.float32, shape=(1,))
         self.action_holder = tf.placeholder(tf.int32, shape=(1,))
-
         self.responsible_weight = tf.slice(self.output, self.action_holder, [1])
         self.loss = -(tf.log(self.responsible_weight)*self.reward_holder)
         optimizer = tf.train.AdamOptimizer(learning_rate=lr)

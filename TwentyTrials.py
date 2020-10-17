@@ -18,8 +18,9 @@ from Plot import *
 # GreedyStrategies and Plot classes are used here. Please go to see Class tab for more details.
 df = pd.DataFrame({'x': [], 'y': []})
 seed = 1
+numberOfTrials = 20
 
-trial20 = greedyStrategies(20)
+trial20 = greedyStrategies(numberOfTrials)
 df1a = trial20.decreasingEpsilon(seed, df)
 df2a = trial20.epsilonGreedy(seed, df)
 df3a = trial20.hybrid1(seed, df)

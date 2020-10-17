@@ -35,8 +35,9 @@ def get_integer(num):
         return number
 
 seed = get_integer(number1)
+numberOfTrials = 1
 
-trial1 = greedyStrategies(1)
+trial1 = greedyStrategies(numberOfTrials)
 df1a = trial1.decreasingEpsilon(seed, df)
 df2a = trial1.epsilonGreedy(seed, df)
 df3a = trial1.hybrid1(seed, df)
