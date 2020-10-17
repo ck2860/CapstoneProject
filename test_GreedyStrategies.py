@@ -83,7 +83,6 @@ class TestGreedystrategies(TestCase):
         df1Ameans = df1aa.mean(0)
         self.assertEqual(df1Ameans[8], 65.2)
 
-
     ## Documentation for test_hybrid5 function
     #  the random seed is 7 and the 8th value of mean rewards result is expectedlly 55.6
     def test_hybrid5(self):

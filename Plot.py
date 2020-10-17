@@ -12,7 +12,7 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 
 
 ## Documentation for graph function
-# Plot the x and y values for graphing and returns the graph of evaluation
+# Plot the x and y values for graphing and returns the line graph of evaluation
 ##@param df1a: any dataframe
 ##@param df1Ameans: Decreasing-Epsilon means rewards
 ##@param df2Ameans: Greedy-Epsilon means rewards
@@ -31,6 +31,7 @@ def Eval_graph(df1a, df1Ameans, df2Ameans, df3Ameans, df4Ameans, df5Ameans, df6A
     plt.figure(figsize=(900 / 96, 900 / 96), dpi=96)
     palette = plt.get_cmap('tab10')
     num = 0
+
     for column in df.drop('x', axis=1):
         num += 1
         plt.subplot(3, 3, num)

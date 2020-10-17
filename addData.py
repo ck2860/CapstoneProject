@@ -15,13 +15,14 @@ def importingData():
     data = np.negative([newArr[0], newArr[1]])  # converting them into negative number
     return data
 
+
 ## Documentation for get_integer function
 # The function would handle the exceptions if the value is not an integer.
 def get_integer(num):
     try:
-        number = int(num)
+        number = int(num)  # try to cast the num into an integer.
     except:
         print("An exception occurred: you entered a non-integer value.")
-        sys.exit(1)
+        sys.exit(1)  # if it fails, return the message and exit the program
     else:
-        return number
+        return number  # return number if it is an integer

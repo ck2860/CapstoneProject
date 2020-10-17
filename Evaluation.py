@@ -53,14 +53,15 @@ df4aa = pd.DataFrame(df4a['y'].values.reshape(intNum, 20))
 df4Ameans = df4aa.mean(0)  # averaging the rewards from hybrid#2 strategy
 
 df5aa = pd.DataFrame(df5a['y'].values.reshape(intNum, 20))
-df5Ameans = df5aa.mean(0) # averaging the rewards from hybrid#3 strategy
+df5Ameans = df5aa.mean(0)  # averaging the rewards from hybrid#3 strategy
 
 df6aa = pd.DataFrame(df6a['y'].values.reshape(intNum, 20))
-df6Ameans = df6aa.mean(0)
+df6Ameans = df6aa.mean(0)  # averaging the rewards from hybrid#4 strategy
 
 df7aa = pd.DataFrame(df7a['y'].values.reshape(intNum, 20))
-df7Ameans = df7aa.mean(0)
+df7Ameans = df7aa.mean(0)  # averaging the rewards from hybrid#5 strategy
 
+# Calling Eval_graph function to make the line graphs. All of the rewards from the epsilon-based strategies are plotted.
 Eval_graph(df1a=df1a, df1Ameans=df1Ameans, df2Ameans=df2Ameans, df3Ameans=df3Ameans, df4Ameans=df4Ameans, df5Ameans=df5Ameans, df6Ameans=df6Ameans, df7Ameans=df7Ameans)
 
 print("The python script is %s" % (sys.argv[0]), "and  %s trial(s) of epsilon-based strategies is/are done." % (sys.argv[1]))

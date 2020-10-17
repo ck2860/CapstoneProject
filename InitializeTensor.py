@@ -46,5 +46,5 @@ def BanditTensor(cBandit, e, sess, myAgent, weights, total_reward, i, df):
     total_reward[s, action] += reward
     if i % 500 == 0:
         meanR = np.mean(total_reward, axis=1)
-        df = df.append({'x': i, 'y': meanR[0]}, ignore_index=True)
+        df = df.append({'x': i, 'y': meanR[0]}, ignore_index=True)  # recording the rewards into the data
     return df
