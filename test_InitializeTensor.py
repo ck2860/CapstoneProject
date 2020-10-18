@@ -7,7 +7,7 @@ import ContextualBandit
 ## Documentation for test_InitializeTensor.py
 # We test the initializeTensor function to make sure that the types of Contextual Bandit and Agent are correct/consistent.
 
-class Test(TestCase):
+class Test_InitializeTensor(TestCase):
     ## Documentation for test_initialize_tensor1 function
     # to make sure that total_episodes is not returned as string and expectedly 10,000
     def test_initialize_tensor1(self):

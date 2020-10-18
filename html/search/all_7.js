@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initializetensor_17',['initializeTensor',['../namespaceinitialize_tensor.html',1,'']]]
+  ['main_20page_15',['Main Page',['../index.html',1,'']]]
 ];

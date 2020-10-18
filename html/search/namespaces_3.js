@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['greedystrategies_52',['GreedyStrategies',['../namespace_greedy_strategies.html',1,'']]]
+  ['statstest_47',['StatsTest',['../namespace_stats_test.html',1,'']]]
 ];

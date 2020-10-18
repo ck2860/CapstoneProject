@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import sys
 
-## @package addData
+
 ## Documentation for importingData function
 # The function would read/import the ads optimisation data for the contextual bandit. The agent will be able to select ads.
 # We split the data so we will have 5 ads.

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_20page_18',['Main Page',['../index.html',1,'']]]
+  ['pullarm_16',['pullArm',['../class_contextual_bandit_1_1contextual__bandit.html#a15ebf69344de721c264db100dad488d0',1,'ContextualBandit::contextual_bandit']]]
 ];

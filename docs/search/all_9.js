@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['plot_19',['Plot',['../namespace_plot.html',1,'']]],
-  ['pullarm_20',['pullArm',['../class_contextual_bandit_1_1contextual__bandit.html#a15ebf69344de721c264db100dad488d0',1,'ContextualBandit::contextual_bandit']]]
+  ['statstest_17',['StatsTest',['../namespace_stats_test.html',1,'']]]
 ];
