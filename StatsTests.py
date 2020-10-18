@@ -9,11 +9,11 @@ warnings.filterwarnings("ignore")
 ## @package StatsTest
 ## Documentation for StatsTest.py
 # we would be using t-tests and ANOVA for analysis. Script.stat package is used; ttest_ind and f_oneway functions are performed.
-# we use a Tukey post hoc analysis to confirm where the differences occurred between greedy-based strategies: Epsilon-Greedy, Epsilon-Decreasing, Hybrid#2, and Hybrid#4.
-
 # Null Hypothesis (H0): There is no significant difference between the strategies.
 # Alternative Hypothesis (H1): There are significant differences between the strategies.
 # We use 0.05 for the significant level.
+# we use a Tukey post hoc analysis to confirm where the differences occurred between greedy-based strategies: Epsilon-Greedy, Epsilon-Decreasing, Hybrid#2, and Hybrid#4.
+
 
 df = pd.read_csv('data/MeanRewardsResult.csv')  # importing data
 
