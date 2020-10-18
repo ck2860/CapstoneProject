@@ -50,7 +50,11 @@ conda install -c conda-forge tensorflow=1.14
 Note: It depends on your system. There are other commands that you can run with conda. Please read more about [Tensorflow Installment](https://anaconda.org/conda-forge/tensorflow). 
 
 ## Diagrams
+The two diagrams are in [Models](https://github.com/ck2860/MidtermCode-CondyKan/tree/master/models).
 
+1. [Domain Driven Diagram](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/models/DomainModel-Midterm.png) describes the development of reinforcement learning and greedy-based strategies.  
+
+2. [Sequence Diagram](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/models/SequenceDiagram-Midterm.png) explains how the program performs in the sequential order. 
 
 ## Instructions
 
