@@ -10,10 +10,7 @@ from GreedyStrategies import *
 
 
 ## Documentation for test_GreedyStrategies.py
-# We test decreasing-epsilon, greedy-epsilon, hybrid#1, hybrid#2, hybrid#3, hybrid#4, and hybrid#5 functions from GreedyStrategies.py with expected results.
-# These tests help us to ensure that our network is working and consistent. With these tests, we can know our single-layer perceptron works.
-# Since all functions from addData.py, ContextualBandit.py, ContexutualBanditAgent.py, and InitializeTensor.py are utilized in the Greedy-based strategies, we test all functions at once!
-# We will have seven tests with different random seed each and match with expected results in one trial.
+# We test decreasing-epsilon, greedy-epsilon, hybrid#1, hybrid#2, hybrid#3, hybrid#4, and hybrid#5 functions from GreedyStrategies.py with expected results. These tests help us to ensure that our network is working and consistent. With these tests, we can know our single-layer perceptron works. We will have seven tests with different random seed each and match with expected results in one trial.
 
 class TestGreedystrategies(TestCase):
     ## Documentation for test_decreasing_epsilon function

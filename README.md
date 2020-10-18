@@ -78,7 +78,7 @@ Please read [documentation](https://ck2860.github.io/MidtermCode-CondyKan/) for 
 
 Please open your Anaconda Prompt and go to the directory where you downloaded the project code. Please read the directions below before you run the code. Note that the ```$``` is not part of the command. You may get warning messages due to the packages that are used in the code. 
 
-1. For evaluations, you may compile [Evaluation](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Evaluation.py) with your chosen number of trials. 
+1. For evaluations, you may compile [Evaluation](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Evaluation.py) with your chosen number of trials. The figure for evaluations should be in a pop-up window.
 
 There will be two arguments in your command line: the first one is the name of python file (Evaluation.py) and second one is the number of trials. For example, if you want to do 5 trials (it may take up to 5 minutes), you can run the line below: 
 ```
@@ -86,7 +86,7 @@ $ python Evaluation.py 5
 ```
 *Note that if you decide to run more than one trial, it may take longer. The results may be different due to number of trials. *
 
-2. For statistical analysis, we analyze the results from the 20 trials evaluations. You can perform T-tests, ANOVA, and Tukey Post Hoc tests by compiling [StatsTests](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py). After narrowing them down and performing the Post Hoc test, you may see the differences occurred between greedy-based strategies. The figures for evaluations and the post hoc tests should be in pop-up windows. 
+2. For statistical analysis, we analyze the results from the 20 trials evaluations. You can perform T-tests, ANOVA, and Tukey Post Hoc tests by compiling [StatsTests](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py). After narrowing them down and performing the Post Hoc test, you may see the differences occurred between greedy-based strategies. The Tukey post hoc plot should be in a pop-up window. 
 
 You will only have one command-line argument: StatTests.py. You would want to run by:
 ```

@@ -13,6 +13,7 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 ## Documentation for Agent class
 # This class sets up a contextual bandit agent via building a feed-forward in the network and training/updating the network.
 # It would either return positive or negative reward.  Positive reinforcement is a reward for picking the most optimal arm; negative reinforcement is a penalty for not picking the best arm.
+
 class agent():
     ## Create a new agent
     # The agent would have a learning rate, the size of a state, and the size of actions.
