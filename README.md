@@ -115,6 +115,6 @@ $ python -m unittest test_GreedyStrategies.py
 $ python -m unittest test_InitializeTensor.py
 ```
 
-*You could read [documentation](https://ck2860.github.io/MidtermCode-CondyKan/) for more details.* If you have any questions, please feel free to email me at ck2860@rit.edu. 
+*You could read [documentation](https://ck2860.github.io/MidtermCode-CondyKan/index.html) for more details.* If you have any questions, please feel free to email me at ck2860@rit.edu. 
 
 Thanks for reading!
