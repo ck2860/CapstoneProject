@@ -4,9 +4,7 @@ from addData import *
 
 ## @package test_addData
 ## Documentation for test_addData.py
-# The test is for ensuring that the function handle exceptions properly.
-# Since we use the number from command line to determine the number of trials, so we could not have non-integer values as the input.
-# There are five tests that are expected to pass.
+# The test is for ensuring that the function handle exceptions properly. Since we use the number from command line to determine the number of trials, so we could not have non-integer values as the input.
 class Test(TestCase):
     ## Documentation for test_get_integer1 function
     #  the input is 2 and it is expected to return as 2.
