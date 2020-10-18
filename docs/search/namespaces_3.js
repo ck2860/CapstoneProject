@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['greedystrategies_52',['GreedyStrategies',['../namespace_greedy_strategies.html',1,'']]]
+  ['get_5finteger_54',['get_integer',['../namespaceget__integer.html',1,'']]],
+  ['greedystrategies_55',['GreedyStrategies',['../namespace_greedy_strategies.html',1,'']]]
 ];

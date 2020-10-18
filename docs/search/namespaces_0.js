@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bandittensor_47',['BanditTensor',['../namespace_bandit_tensor.html',1,'']]]
+  ['bandittensor_49',['BanditTensor',['../namespace_bandit_tensor.html',1,'']]]
 ];

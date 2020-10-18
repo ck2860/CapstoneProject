@@ -3,10 +3,12 @@ import pandas as pd
 import sys
 
 
+## @package importingData
 ## Documentation for importingData function
 # The function would read/import the ads optimisation data for the contextual bandit. The agent will be able to select ads.
 # We split the data so we will have 5 ads.
 # The lower the value, the greater the change of a positive reward since it is based on sampling a number greater than the number stored in the bandit from a normal distribution.
+
 def importingData():
     adsDF = pd.read_csv('data/Ads_Optimisation.csv')  # importing the data
     meansDF = adsDF.mean()  # averaging the click for each ad.
@@ -16,8 +18,10 @@ def importingData():
     return data
 
 
+## @package get_integer
 ## Documentation for get_integer function
 # The function would handle the exceptions if the value is not an integer.
+
 def get_integer(num):
     try:
         number = int(num)  # try to cast the num into an integer.

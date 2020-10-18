@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['initalizetensor_53',['initalizeTensor',['../namespaceinitalize_tensor.html',1,'']]]
+  ['importingdata_56',['importingData',['../namespaceimporting_data.html',1,'']]],
+  ['initalizetensor_57',['initalizeTensor',['../namespaceinitalize_tensor.html',1,'']]]
 ];
