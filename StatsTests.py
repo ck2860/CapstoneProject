@@ -5,7 +5,6 @@ from statsmodels.stats.multicomp import pairwise_tukeyhsd
 import warnings
 warnings.filterwarnings("ignore")
 
-## @package StatsTest
 ## Documentation for StatsTest.py
 # we would be using t-tests and ANOVA for analysis. Script.stat package is used; ttest_ind and f_oneway functions are performed.
 # we use a Tukey post hoc analysis to confirm where the differences occurred between greedy-based strategies: Epsilon-Greedy, Epsilon-Decreasing, Hybrid#2, and Hybrid#4.

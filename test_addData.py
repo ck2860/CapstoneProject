@@ -2,6 +2,7 @@ from unittest import TestCase
 from addData import *
 
 
+## @package test_addData
 ## Documentation for test_addData.py
 # The test is for ensuring that the function handle exceptions properly. Since we use the number from command line to determine the number of trials, so we could not have non-integer values as the input.
 

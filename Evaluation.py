@@ -13,7 +13,6 @@ from GreedyStrategies import *
 from Plot import *
 from addData import *
 
-## @package Evaluation
 ## Documentation for Evaluation.py
 # n trial(s) of evaluations is/are performed with your chosen random seed. Epsilon-Decreasing, Epsilon-Greedy, Hybrid#1-#5 are included in the evaluation.
 # n is determined by the person's input

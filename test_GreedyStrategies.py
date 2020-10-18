@@ -9,6 +9,7 @@ from ContextualBanditAgent import *
 from GreedyStrategies import *
 
 
+## @package test_GreedyStrategies
 ## Documentation for test_GreedyStrategies.py
 # We test decreasing-epsilon, greedy-epsilon, hybrid#1, hybrid#2, hybrid#3, hybrid#4, and hybrid#5 functions from GreedyStrategies.py with expected results. These tests help us to ensure that our network is working and consistent. With these tests, we can know our single-layer perceptron works. We will have seven tests with different random seed each and match with expected results in one trial.
 

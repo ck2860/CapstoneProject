@@ -10,6 +10,7 @@ from ContextualBandit import *
 from ContextualBanditAgent import *
 tf.logging.set_verbosity(tf.logging.ERROR)
 
+
 ## Documentation for initializeTensor function
 # The network would be initialized using Tensorflow.
 # This function sets up with learning rate of 0.05 and 10,000 episodes, along with number of bandits and actions.
