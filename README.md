@@ -26,8 +26,8 @@ All of the strategies are in the evaluation code. The reinforcement learning cod
 * Requirements
 * Setup
 * Diagrams
-* Unit Tests
 * Instructions
+* Unit Tests
 
 ## Requirements
 Since all the code are written in Python, you should have or download [Python](https://www.python.org/downloads/).  Your Python version should be 3.5-3.8.
