@@ -10,7 +10,7 @@ from addData import *
 import tensorflow.compat.v1 as tf
 tf.logging.set_verbosity(tf.logging.ERROR)
 
-
+## @package ContextualBandit
 ## Documentation for Contextual Bandit class
 # this class initializes with a state, bandits, number of bandits, and number of actions.
 # It has two functions: getBandit(): and pullArm(action):

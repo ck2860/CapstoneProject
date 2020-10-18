@@ -69,7 +69,7 @@ $(function() {
 Contextual Bandit Methods</h1>
 <p>We would solve contextual bandit problems, using a policy-gradient based reinforcement learning. We would evaluate seven different epsilon-based strategies. We have Epsilon-Greedy, Epsilon-Decreasing, and five different combinations of Epsilon-Greedy and Epsilon-Decreasing. We tweaked with the epsilon probability and episodes. Five combinations were created!</p>
 <p>In the experiment, we have 10,000 episodes and use the learning rate of 0.05. The epsilon is the probability of exploration.</p>
-<p><b>Epsilon-Decreasing:</b> The experiment starts with pure exploration and epsilon is decreased to 0% in the end.</p>
+<p><b>Epsilon-Decreasing:</b> The experiment starts with pure exploration and epsilon is decreased then becomes 0 at the end.</p>
 <p><b>Epsilon-Greedy:</b> Epsilon is 10%. The probability is fixed.</p>
 <p><b>Hybrid#1:</b> Epsilon is decreased from 90% to 10% throughout the experiment.</p>
 <p><b>Hybrid#2:</b> Epsilon is decreased from 100% to 10% in the first 5,000 episodes and keeps as 10% for the rest of the experiment.</p>
@@ -82,6 +82,8 @@ Table of contents</h2>
 <ul>
 <li>Requirements</li>
 <li>Setup</li>
+<li>Diagrams</li>
+<li>Unit Tests</li>
 <li>Instructions</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md2"></a>
@@ -97,6 +99,14 @@ Setup</h2>
 <div class="fragment"><div class="line">conda install -c conda-forge tensorflow=1.14</div>
 </div><!-- fragment --><p>Note: It depends on your system. There are other commands that you can run with conda. Please read more about <a href="https://anaconda.org/conda-forge/tensorflow">Tensorflow Installment</a>.</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
+Diagrams</h2>
+<p>The two diagrams are in <a href="https://github.com/ck2860/MidtermCode-CondyKan/tree/master/models">Models</a>.</p>
+<ol type="1">
+<li><a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/models/DomainModel-Midterm.png">Domain Driven Diagram</a> describes the development of reinforcement learning and greedy-based strategies. <br  />
+</li>
+<li><a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/models/SequenceDiagram-Midterm.png">Sequence Diagram</a> explains how the program performs in the sequential order.</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Instructions</h2>
 <p>There are two options that you could download the whole code.</p><ol type="1">
 <li>Clicking "Code" green button and "download ZIP" on the top right hand on the Git repository page.</li>
@@ -104,17 +114,35 @@ Instructions</h2>
 </ol>
 <p>Once you have the files in your system/computer, you should see there are three different datasets: <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/Ads_Optimisation.csv">Ads Optimisation</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/MeanRewardsResult.csv">Mean Rewards Results</a>, and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/data/TukeyData.csv">Tukey Data</a>, which are already provided in the data folder. You will be using them for this code project so make sure they are in the right folder &ndash; data. When you run the python codes, they should be able to find the datasets in the data folder.</p>
 <p>The Ads Optimisation data set is obtained from <a href="https://www.kaggle.com/akram24/ads-ctr-optimisation">Kaggle</a>. You will be using this for reinforcement learning and evaluations. For the evaluation, the ads are narrowed down to 5 ads so our reinforcement agent has five ads (Ad#0 - Ad#4) to select.</p>
-<p>Both MeanRewardsResult and TukeyData datasets are the results from the evaluations with 20 random seeds (#1-#20). The Mean Rewards Result data is used for T-tests and ANOVA. Lastly, the TukeyData is used for the <a class="el" href="namespace_tukey.html">Tukey</a>'s Post Hoc Test.</p>
+<p>Both MeanRewardsResult and TukeyData datasets are the results from the evaluations with 20 random seeds (#1-#20). The Mean Rewards Result data is used for T-tests and ANOVA. Lastly, the TukeyData is used for the Tukey's Post Hoc Test.</p>
 <p><em>Please make sure they all are in the same directory so the codes would be able to recognize the data sets from the data folder. For this reinforcement learning, the data set can be used in online advertising to determine which is the best ad to show the user. It does not mean they would work with other bandit problems.</em></p>
-<p>We have classes in the folder that would be utilized in the running codes. <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/ContextualBandit.py">ContextualBandit</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/ContextualBanditAgent.py">ContextualBanditAgent</a>, and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/GreedyStrategies.py">GreedyStrategies</a> are for the evaluations. It would set contextual bandits up, run reinforcement learning, and use greedy-based strategies. Finally, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Plot.py">Plot</a> is programmed to plot evaluation results.</p>
-<p>You will be able to see five Pythons codes in the file, you could run them if you like! The figures for evaluations and the post hoc tests should be in pop-up windows. For evaluations, there are three Python program that you can run: <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/1trial.py">1trial</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/10trials.py">10trials</a>, and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/20trials.py">20trials</a>. 1trial code runs one trial of evaluation. 10trials code runs 10 trials of evaluation. Then 20trials code runs 20 trials of evaluation. You can evaluate by comparing strategies's mean rewards. Last two Python programs: <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py">StatsTests</a> and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Tukey.py">Tukey</a> are used for statistical analysis. We analyze the results from the 20 trials evaluations. You can perform T-tests and ANOVA by running StatsTest.py code. After narrowing them down and performing the Post Hoc test, you may see the differences occurred between greedy-based strategies by compiling the Tukey.py file. Please read <a href="https://ck2860.github.io/MidtermCode-CondyKan/">documentation</a> for more details.</p>
-<p>Please open your Anaconda Prompt and go to the directory where you downloaded the project code. Please read the directions below before you run the code. Note that the <code>$</code> is not part of the command.</p>
-<p>If you want to run one trial of greedy-based strategies of your chosen random seed. There will be two arguments in your command line: the first one is the name of python file (1trial.py) and second one is the random seed number. For example, if you want to run it with a random seed of 5 (it may take up to 2 minutes), you can run the line below: </p><div class="fragment"><div class="line">$ python 1trial.py 5</div>
-</div><!-- fragment --><p><em>Note that if you use a different random seed for 1trial file, the evaluation results may be different due to reinforcement learning and strategies.</em></p>
-<p>If you want to run 10 trials of greedy-based strategies with 10 different random seeds, you will only need to put 10trials.py as a command-line argument (it may take up to 10 minutes). You should compile it by: </p><div class="fragment"><div class="line">$ python 10trials.py</div>
-</div><!-- fragment --><p>If you want to run 20 trials of greedy-based strategies with 20 different random seeds, you will only need to put 20trials.py as a command-line argument (it may take up to 20 minutes). Your command line should be: </p><div class="fragment"><div class="line">$ python 20trials.py</div>
-</div><!-- fragment --><p>For t-tests and ANOVA, you will only have one command-line argument: StatTests.py. You would want to run by: </p><div class="fragment"><div class="line">$ python StatsTests.py</div>
-</div><!-- fragment --><p>Lastly, you can run a <a class="el" href="namespace_tukey.html">Tukey</a>'s Post Hoc Test with one command-line argument (Tukey.py) by: </p><div class="fragment"><div class="line">$ python Tukey.py</div>
+<p>We have classes and functions in the folder that would be utilized in the running codes. <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/addData.py">addData</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/ContextualBandit.py">ContextualBandit</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/ContextualBanditAgent.py">ContextualBanditAgent</a>, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/InitializeTensor.py">InitializeTensor</a> and <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/GreedyStrategies.py">GreedyStrategies</a> are for the evaluations. It would import data, set contextual bandits up, initialize the network, run reinforcement learning, and test greedy-based strategies. Finally, <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Plot.py">Plot</a> is programmed to plot evaluation results. You have two compilable Pythons codes in the folder, you could run them if you like!</p>
+<p>Please read <a href="https://ck2860.github.io/MidtermCode-CondyKan/">documentation</a> for more details.</p>
+<p>Please open your Anaconda Prompt and go to the directory where you downloaded the project code. Please read the directions below before you run the code. Note that the <code>$</code> is not part of the command. You may get warning messages due to the packages that are used in the code.</p>
+<ol type="1">
+<li>For evaluations, you may compile <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Evaluation.py">Evaluation</a> with your chosen number of trials.</li>
+</ol>
+<p>There will be two arguments in your command line: the first one is the name of python file (Evaluation.py) and second one is the number of trials. For example, if you want to do 5 trials (it may take up to 5 minutes), you can run the line below: </p><div class="fragment"><div class="line">$ python Evaluation.py 5</div>
+</div><!-- fragment --><p>*Note that if you decide to run more than one trial, it may take longer. The results may be different due to number of trials. *</p>
+<ol type="1">
+<li>For statistical analysis, we analyze the results from the 20 trials evaluations. You can perform T-tests, ANOVA, and Tukey Post Hoc tests by compiling <a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/StatsTests.py">StatsTests</a>. After narrowing them down and performing the Post Hoc test, you may see the differences occurred between greedy-based strategies. The figures for evaluations and the post hoc tests should be in pop-up windows.</li>
+</ol>
+<p>You will only have one command-line argument: StatTests.py. You would want to run by: </p><div class="fragment"><div class="line">$ python StatsTests.py</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
+Unit Tests</h2>
+<p>For unit testings, we have three files to run. Note that you may get warning messages due to the packages that are used in the code but you can ignore them.</p>
+<ol type="1">
+<li><a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/test_addData.py">test_addData</a> is used to ensure that the function handle exceptions properly. Recall that we provide a number of trials when we compile <a class="el" href="namespace_evaluation.html">Evaluation</a> program code, we could not have a non-integer value in the command line. In this file, we have five tests that are expected to pass. You can compile it by:</li>
+</ol>
+<div class="fragment"><div class="line">$ python -m unittest test_addData.py</div>
+</div><!-- fragment --><ol type="1">
+<li><a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/test_GreedyStrategies.py">test_Greedystrategies</a> is for testing decreasing-epsilon, greedy-epsilon, hybrid#1, hybrid#2, hybrid#3, hybrid#4, and hybrid#5 functions.One trial of each function would be performed. Since all the functions from addData.py, ContextualBandit.py, ContexutualBanditAgent.py, and InitializeTensor.py are used in the epsilon-based strategy functions, we test all the functions at once. Here, we have seven tests with varied random seed and match them with expected results. With the tests, we can confirm that the network is consistent. You would want to run by:</li>
+</ol>
+<div class="fragment"><div class="line">$ python -m unittest test_GreedyStrategies.py</div>
+</div><!-- fragment --><ol type="1">
+<li><a href="https://github.com/ck2860/MidtermCode-CondyKan/blob/master/test_InitializeTensor.py">test_InitalizeTensor</a> is used to check and ensure that the types of parameters are correct. We have three tests to perform. You can compile it by:</li>
+</ol>
+<div class="fragment"><div class="line">$ python -m unittest test_initializeTensor.py</div>
 </div><!-- fragment --><p>If you have any questions, please feel free to email me at <a href="#" onclick="location.href='mai'+'lto:'+'ck2'+'86'+'0@r'+'it'+'.ed'+'u'; return false;">ck286<span style="display: none;">.nosp@m.</span>0@ri<span style="display: none;">.nosp@m.</span>t.edu</a>.</p>
 <p>Thanks for reading! </p>
 </div></div><!-- PageDoc -->

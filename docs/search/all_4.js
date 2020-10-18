@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['epsilongreedy_4',['EpsilonGreedy',['../class_greedy_strategies_1_1_greedystrategies.html#a66cc1790772c7de45325c64a068c9521',1,'GreedyStrategies::Greedystrategies']]]
+  ['epsilongreedy_7',['epsilonGreedy',['../class_greedy_strategies_1_1greedy_strategies.html#ab3dfec3408d7006940fcc0322e39c338',1,'GreedyStrategies::greedyStrategies']]],
+  ['evaluation_8',['Evaluation',['../namespace_evaluation.html',1,'']]]
 ];

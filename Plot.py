@@ -10,7 +10,7 @@ from statsmodels.stats.multicomp import pairwise_tukeyhsd
 import tensorflow.compat.v1 as tf
 tf.logging.set_verbosity(tf.logging.ERROR)
 
-
+## @package Plot
 ## Documentation for graph function
 # Plot the x and y values for graphing and returns the line graph of evaluation
 ##@param df1a: any dataframe

@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['hybrid1_35',['hybrid1',['../class_greedy_strategies_1_1_greedystrategies.html#a05301e09dc4fd3501a69eb48675bb768',1,'GreedyStrategies::Greedystrategies']]],
-  ['hybrid2_36',['hybrid2',['../class_greedy_strategies_1_1_greedystrategies.html#a3c327ade9300c9f09f93f62f5f77fac5',1,'GreedyStrategies::Greedystrategies']]],
-  ['hybrid3_37',['hybrid3',['../class_greedy_strategies_1_1_greedystrategies.html#a9b8af14b875a0c8e2dac51f783f10142',1,'GreedyStrategies::Greedystrategies']]],
-  ['hybrid4_38',['hybrid4',['../class_greedy_strategies_1_1_greedystrategies.html#a5dedf2198555f81842aa9a520737c9af',1,'GreedyStrategies::Greedystrategies']]],
-  ['hybrid5_39',['hybrid5',['../class_greedy_strategies_1_1_greedystrategies.html#aa2eeccdaeb8a8ceff313737cc753b831',1,'GreedyStrategies::Greedystrategies']]]
+  ['hybrid1_64',['hybrid1',['../class_greedy_strategies_1_1greedy_strategies.html#a5422460b71033d649a65499829815183',1,'GreedyStrategies::greedyStrategies']]],
+  ['hybrid2_65',['hybrid2',['../class_greedy_strategies_1_1greedy_strategies.html#ad0968d4256ae4a9d35fbe46489b33aa5',1,'GreedyStrategies::greedyStrategies']]],
+  ['hybrid3_66',['hybrid3',['../class_greedy_strategies_1_1greedy_strategies.html#a90923bec2cd1d83d8949dd834d0d37ab',1,'GreedyStrategies::greedyStrategies']]],
+  ['hybrid4_67',['hybrid4',['../class_greedy_strategies_1_1greedy_strategies.html#ac36261d899f1fee5bf5aafe6ccbac6af',1,'GreedyStrategies::greedyStrategies']]],
+  ['hybrid5_68',['hybrid5',['../class_greedy_strategies_1_1greedy_strategies.html#a98ea3ce8a4d75b5d28e8df43c81e52b7',1,'GreedyStrategies::greedyStrategies']]]
 ];

@@ -3,7 +3,6 @@ from InitializeTensor import *
 import ContextualBanditAgent
 import ContextualBandit
 
-
 ## @package test_InitializeTensor
 ## Documentation for test_InitializeTensor.py
 # We test the initializeTensor function to make sure that the types of Contextual Bandit and Agent are correct/consistent.

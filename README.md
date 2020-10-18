@@ -103,11 +103,13 @@ $ python -m unittest test_addData.py
 ```
 
 2. [test_Greedystrategies](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/test_GreedyStrategies.py) is for testing decreasing-epsilon, greedy-epsilon, hybrid#1, hybrid#2, hybrid#3, hybrid#4, and hybrid#5 functions.One trial of each function would be performed. Since all the functions from addData.py, ContextualBandit.py, ContexutualBanditAgent.py, and InitializeTensor.py are used in the epsilon-based strategy functions, we test all the functions at once. Here, we have seven tests with varied random seed and match them with expected results. With the tests, we can confirm that the network is consistent. You would want to run by:
+
 ```
 $ python -m unittest test_GreedyStrategies.py
 ```
 
 3. [test_InitalizeTensor](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/test_InitializeTensor.py) is used to check and ensure that the types of parameters are correct. We have three tests to perform. You can compile it by: 
+
 ```
 $ python -m unittest test_initializeTensor.py
 ```

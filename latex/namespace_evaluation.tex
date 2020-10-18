@@ -1,0 +1,93 @@
+\hypertarget{namespace_evaluation}{}\doxysection{Evaluation Namespace Reference}
+\label{namespace_evaluation}\index{Evaluation@{Evaluation}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_evaluation_ad80a242c30e19fe6f5917efa2404d4f9}\label{namespace_evaluation_ad80a242c30e19fe6f5917efa2404d4f9}} 
+{\bfseries category}
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a8672bc4c5b9f52eeb204a30b0f6a3540}\label{namespace_evaluation_a8672bc4c5b9f52eeb204a30b0f6a3540}} 
+{\bfseries df} = pd.\+Data\+Frame(\{\textquotesingle{}x\textquotesingle{}\+: \mbox{[}$\,$\mbox{]}, \textquotesingle{}y\textquotesingle{}\+: \mbox{[}$\,$\mbox{]}\})
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a08bf0b5ef5fcf1b85b0d125a5c012b7f}\label{namespace_evaluation_a08bf0b5ef5fcf1b85b0d125a5c012b7f}} 
+{\bfseries number1} = sys.\+argv\mbox{[}1\mbox{]}
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a134d53bd03151ce1ad42baa06c9bdf55}\label{namespace_evaluation_a134d53bd03151ce1ad42baa06c9bdf55}} 
+int {\bfseries seed} = 1
+\item 
+\mbox{\Hypertarget{namespace_evaluation_ac4624e57429c67568f2924de18b11deb}\label{namespace_evaluation_ac4624e57429c67568f2924de18b11deb}} 
+{\bfseries number\+Of\+Trials} = get\+\_\+integer(number1)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a5c09c85cb230ebd74111d53e6cf40e3f}\label{namespace_evaluation_a5c09c85cb230ebd74111d53e6cf40e3f}} 
+{\bfseries int\+Num} = int(number\+Of\+Trials)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a746d6857df97885552d6be4717241fb8}\label{namespace_evaluation_a746d6857df97885552d6be4717241fb8}} 
+{\bfseries trial} = \mbox{\hyperlink{class_greedy_strategies_1_1greedy_strategies}{greedy\+Strategies}}(int\+Num)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a158f00e15b4a02d510de504e282b19c3}\label{namespace_evaluation_a158f00e15b4a02d510de504e282b19c3}} 
+{\bfseries df1a} = trial.\+decreasing\+Epsilon(seed, df)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a6cb76d0fdd2c54dc4c13aa7831a49f84}\label{namespace_evaluation_a6cb76d0fdd2c54dc4c13aa7831a49f84}} 
+{\bfseries df2a} = trial.\+epsilon\+Greedy(seed, df)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_abd32e8d8db1e2ddd4abc674d12ce4d74}\label{namespace_evaluation_abd32e8d8db1e2ddd4abc674d12ce4d74}} 
+{\bfseries df3a} = trial.\+hybrid1(seed, df)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a43c7979b3bb6917d87d5b174063b63e2}\label{namespace_evaluation_a43c7979b3bb6917d87d5b174063b63e2}} 
+{\bfseries df4a} = trial.\+hybrid2(seed, df)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a651f5a162d4dc02fe4e0af21ad0d555f}\label{namespace_evaluation_a651f5a162d4dc02fe4e0af21ad0d555f}} 
+{\bfseries df5a} = trial.\+hybrid3(seed, df)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a59d8440d153d60e2ebf99fba93b5573e}\label{namespace_evaluation_a59d8440d153d60e2ebf99fba93b5573e}} 
+{\bfseries df6a} = trial.\+hybrid4(seed, df)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_adc4e94c3d8e8b4fd1b5c68847c674cbe}\label{namespace_evaluation_adc4e94c3d8e8b4fd1b5c68847c674cbe}} 
+{\bfseries df7a} = trial.\+hybrid5(seed, df)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a8a2549b782cb3c20c48efe317692af6e}\label{namespace_evaluation_a8a2549b782cb3c20c48efe317692af6e}} 
+{\bfseries df1aa} = pd.\+Data\+Frame(df1a\mbox{[}\textquotesingle{}y\textquotesingle{}\mbox{]}.values.\+reshape(int\+Num, 20))
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a61692733a7195993dbfb3876d182409f}\label{namespace_evaluation_a61692733a7195993dbfb3876d182409f}} 
+{\bfseries df1\+Ameans} = df1aa.\+mean(0)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a4f199ec97b3d86f133b51841b0216e71}\label{namespace_evaluation_a4f199ec97b3d86f133b51841b0216e71}} 
+{\bfseries df2aa} = pd.\+Data\+Frame(df2a\mbox{[}\textquotesingle{}y\textquotesingle{}\mbox{]}.values.\+reshape(int\+Num, 20))
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a7d9d4e943728994c5f9632b40fd7d29b}\label{namespace_evaluation_a7d9d4e943728994c5f9632b40fd7d29b}} 
+{\bfseries df2\+Ameans} = df2aa.\+mean(0)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_aa5c8ff16e7e463a3162ead8c137463eb}\label{namespace_evaluation_aa5c8ff16e7e463a3162ead8c137463eb}} 
+{\bfseries df3aa} = pd.\+Data\+Frame(df3a\mbox{[}\textquotesingle{}y\textquotesingle{}\mbox{]}.values.\+reshape(int\+Num, 20))
+\item 
+\mbox{\Hypertarget{namespace_evaluation_afda4ffc11b42b9dace46da8cfe2ad2be}\label{namespace_evaluation_afda4ffc11b42b9dace46da8cfe2ad2be}} 
+{\bfseries df3\+Ameans} = df3aa.\+mean(0)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_aae1d5e46623a39651a735a386b86e03e}\label{namespace_evaluation_aae1d5e46623a39651a735a386b86e03e}} 
+{\bfseries df4aa} = pd.\+Data\+Frame(df4a\mbox{[}\textquotesingle{}y\textquotesingle{}\mbox{]}.values.\+reshape(int\+Num, 20))
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a52ec799f9be7a253b827039109e87d82}\label{namespace_evaluation_a52ec799f9be7a253b827039109e87d82}} 
+{\bfseries df4\+Ameans} = df4aa.\+mean(0)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_ae3058f15d749f0358b28c7ff87c58afd}\label{namespace_evaluation_ae3058f15d749f0358b28c7ff87c58afd}} 
+{\bfseries df5aa} = pd.\+Data\+Frame(df5a\mbox{[}\textquotesingle{}y\textquotesingle{}\mbox{]}.values.\+reshape(int\+Num, 20))
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a1adc3260cd4be3478d0ef4566bf567c7}\label{namespace_evaluation_a1adc3260cd4be3478d0ef4566bf567c7}} 
+{\bfseries df5\+Ameans} = df5aa.\+mean(0)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a19740f138ef6d9798e001b91704313e8}\label{namespace_evaluation_a19740f138ef6d9798e001b91704313e8}} 
+{\bfseries df6aa} = pd.\+Data\+Frame(df6a\mbox{[}\textquotesingle{}y\textquotesingle{}\mbox{]}.values.\+reshape(int\+Num, 20))
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a1b0c85daf5dec668ba21dea68bbd9f97}\label{namespace_evaluation_a1b0c85daf5dec668ba21dea68bbd9f97}} 
+{\bfseries df6\+Ameans} = df6aa.\+mean(0)
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a3c53db75c754eb49b935c8d329cdadaf}\label{namespace_evaluation_a3c53db75c754eb49b935c8d329cdadaf}} 
+{\bfseries df7aa} = pd.\+Data\+Frame(df7a\mbox{[}\textquotesingle{}y\textquotesingle{}\mbox{]}.values.\+reshape(int\+Num, 20))
+\item 
+\mbox{\Hypertarget{namespace_evaluation_a8969a6e333fa6611ca3174a59328381c}\label{namespace_evaluation_a8969a6e333fa6611ca3174a59328381c}} 
+{\bfseries df7\+Ameans} = df7aa.\+mean(0)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Documentation for Evaluation.\+py n trial(s) of evaluations is/are performed with your chosen random seed. Epsilon-\/\+Decreasing, Epsilon-\/\+Greedy, Hybrid\#1-\/\#5 are included in the evaluation. n is determined by the person\textquotesingle{}s input \mbox{\hyperlink{namespace_greedy_strategies}{Greedy\+Strategies}} and \mbox{\hyperlink{namespace_plot}{Plot}} classes are used here. Please go to see Class tab for more details. 
