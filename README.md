@@ -74,7 +74,6 @@ Both MeanRewardsResult and TukeyData datasets are the results from the evaluatio
 
 We have classes and functions in the folder that would be utilized in the running codes. [addData](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/addData.py), [ContextualBandit](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/ContextualBandit.py), [ContextualBanditAgent](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/ContextualBanditAgent.py), [InitializeTensor](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/InitializeTensor.py) and [GreedyStrategies](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/GreedyStrategies.py) are for the evaluations. It would import data, set contextual bandits up, initialize the network, run reinforcement learning, and test greedy-based strategies. Finally, [Plot](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/Plot.py) is programmed to plot evaluation results. You have two compilable Pythons codes in the folder, you could run them if you like! 
 
-Please read [documentation](https://ck2860.github.io/MidtermCode-CondyKan/) for more details. 
 
 Please open your Anaconda Prompt and go to the directory where you downloaded the project code. Please read the directions below before you run the code. Note that the ```$``` is not part of the command. You may get warning messages due to the packages that are used in the code. 
 
@@ -114,6 +113,6 @@ $ python -m unittest test_GreedyStrategies.py
 $ python -m unittest test_InitializeTensor.py
 ```
 
-If you have any questions, please feel free to email me at ck2860@rit.edu. 
+**You could read [documentation](https://ck2860.github.io/MidtermCode-CondyKan/) for more details.** If you have any questions, please feel free to email me at ck2860@rit.edu. 
 
 Thanks for reading!
