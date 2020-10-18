@@ -111,7 +111,7 @@ $ python -m unittest test_GreedyStrategies.py
 3. [test_InitalizeTensor](https://github.com/ck2860/MidtermCode-CondyKan/blob/master/test_InitializeTensor.py) is used to check and ensure that the types of parameters are correct. We have three tests to perform. You can compile it by: 
 
 ```
-$ python -m unittest test_initializeTensor.py
+$ python -m unittest test_InitializeTensor.py
 ```
 
 If you have any questions, please feel free to email me at ck2860@rit.edu. 
