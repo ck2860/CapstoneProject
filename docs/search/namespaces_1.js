@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['greedystrategies_43',['GreedyStrategies',['../namespace_greedy_strategies.html',1,'']]]
+  ['contextualbandit_48',['ContextualBandit',['../namespace_contextual_bandit.html',1,'']]],
+  ['contextualbanditagent_49',['ContextualBanditAgent',['../namespace_contextual_bandit_agent.html',1,'']]]
 ];

@@ -11,11 +11,11 @@ from ContextualBanditAgent import *
 tf.logging.set_verbosity(tf.logging.ERROR)
 from InitializeTensor import *
 
+
 ## @package GreedyStrategies
 ## Documentation for Greedy Strategies class
 # this class has decreasing-epsilon, greedy-epsilon, hybrid#1, hybrid#2, hybrid#3, hybrid#4, and hybrid#5 functions.
 # ContextualBandit and ContextualBanditAgent classes are used here. Please go to see Class tab for more details.
-
 
 class greedyStrategies():
     def __init__(self, n):

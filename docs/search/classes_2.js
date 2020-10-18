@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['greedystrategies_37',['greedyStrategies',['../class_greedy_strategies_1_1greedy_strategies.html',1,'GreedyStrategies']]]
+  ['greedystrategies_43',['greedyStrategies',['../class_greedy_strategies_1_1greedy_strategies.html',1,'GreedyStrategies']]]
 ];

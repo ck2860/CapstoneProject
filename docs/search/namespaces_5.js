@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plot_53',['plot',['../namespaceplot.html',1,'']]]
+  ['statstest_54',['StatsTest',['../namespace_stats_test.html',1,'']]]
 ];

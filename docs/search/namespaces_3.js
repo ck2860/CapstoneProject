@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initializetensor_48',['initializeTensor',['../namespaceinitialize_tensor.html',1,'']]]
+  ['greedystrategies_52',['GreedyStrategies',['../namespace_greedy_strategies.html',1,'']]]
 ];

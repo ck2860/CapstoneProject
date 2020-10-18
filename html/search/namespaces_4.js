@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plot_49',['plot',['../namespaceplot.html',1,'']]]
+  ['initalizetensor_53',['initalizeTensor',['../namespaceinitalize_tensor.html',1,'']]]
 ];

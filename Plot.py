@@ -11,6 +11,7 @@ import tensorflow.compat.v1 as tf
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 
+## @package eval_graph
 ## Documentation for Eval_graph function
 # Plot the x and y values for graphing and returns the line graph of evaluation
 ##@param df1a: any dataframe
@@ -21,6 +22,7 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 ##@param df5Ameans: Hybrid#3 means rewards
 ##@param df6Ameans: Hybrid#4 means rewards
 ##@param df7Ameans: Hybrid#5 means rewards
+
 def Eval_graph(df1a, df1Ameans, df2Ameans, df3Ameans, df4Ameans, df5Ameans, df6Ameans, df7Ameans):
     df = pd.DataFrame({'x': df1a['x'], 'Epsilon-Decreasing': df1Ameans, 'Epsilon-Greedy': df2Ameans,
                            'Hybrid #1': df3Ameans, 'Hybrid #2': df4Ameans, 'Hybrid#3': df5Ameans,
@@ -60,9 +62,10 @@ def Eval_graph(df1a, df1Ameans, df2Ameans, df3Ameans, df4Ameans, df5Ameans, df6A
         plt.suptitle("In comparison of mean rewards", fontsize=13, fontweight=0, color='black', style='italic', y=1.02)
     return plt.show()
 
-
+## @package tukey_plot
 ## Documentation for tukey function
 # Plot the Tukey post hoc test
+
 def tukey_plot(result):
     # perform plot_simultaneous function from the statsmodel package
     result.plot_simultaneous()

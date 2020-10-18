@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['decreasingepsilon_5',['decreasingEpsilon',['../class_greedy_strategies_1_1greedy_strategies.html#a77c3b29dac46a36d4d9fe3ec9717098c',1,'GreedyStrategies::greedyStrategies']]]
+  ['contextual_5fbandit_3',['contextual_bandit',['../class_contextual_bandit_1_1contextual__bandit.html',1,'ContextualBandit']]],
+  ['contextualbandit_4',['ContextualBandit',['../namespace_contextual_bandit.html',1,'']]],
+  ['contextualbanditagent_5',['ContextualBanditAgent',['../namespace_contextual_bandit_agent.html',1,'']]]
 ];

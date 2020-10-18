@@ -11,10 +11,12 @@ from ContextualBanditAgent import *
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 
+## @package initalizeTensor
 ## Documentation for initializeTensor function
 # The network would be initialized using Tensorflow.
 # This function sets up with learning rate of 0.05 and 10,000 episodes, along with number of bandits and actions.
 # returns contextual_bandit, agent, weights, total_episode, total_reward, and init
+
 def initializeTensor():
     tf.reset_default_graph()
     cBandit = contextual_bandit()
@@ -26,6 +28,7 @@ def initializeTensor():
     return cBandit, myAgent, weights, total_episodes, total_reward, init
 
 
+## @package BanditTensor
 ## Documentation for BanditTensor function
 # We start with getting a state and decide to explore or exploit based on greedy strategies.
 # Once we get the reward, using Contextual Bandit's pullArm function.
